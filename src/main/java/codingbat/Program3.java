@@ -1,16 +1,13 @@
 package codingbat;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class Program3 {
 	
 	public static String delDel(String str){
 		
 		//adelbc
-		if(str.length() < 3){
+		if(str.length() < 4){
 			return str;
-		}else if(str.contains("del")){
+		}else if(str.substring(1, 4).equals("del")){
 			
 			StringBuilder subbedString = new StringBuilder(str);
 			

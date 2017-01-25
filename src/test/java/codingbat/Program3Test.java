@@ -28,6 +28,8 @@ public class Program3Test {
 	public void whenStringLengthIsLessThan3ThenReturnStringAsIs(){
 		
 		assertEquals("Hi", Program3.delDel("Hi"));
+		assertEquals("add", Program3.delDel("add"));
+		assertEquals("del", Program3.delDel("del"));
 		
 	}
 	
