@@ -46,5 +46,25 @@ public class Program5Test {
 		assertEquals("", Program5.startOz("abc"));
 		assertEquals("", Program5.startOz("zoo"));
 	}
+	
+	@Test
+	public void whenSingleStringOIsPassedThenReturnO(){
+		assertEquals("o", Program5.startOz("o"));
+	}
+	
+	@Test
+	public void whenStringContainsZThenReturnEmptyString(){
+		assertEquals("", Program5.startOz("z"));
+	}
+	
+	@Test
+	public void whenEmptyStringIsPassedThenReturnEmptyString(){
+		assertEquals("", Program5.startOz(""));
+	}
+	
+	@Test
+	public void whenStringContainsZZZZThenReturnZ(){
+		assertEquals("z", Program5.startOz("zzzz"));
+	}
 
 }
