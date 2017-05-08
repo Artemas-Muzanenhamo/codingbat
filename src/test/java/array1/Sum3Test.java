@@ -28,6 +28,10 @@ public class Sum3Test {
     @Test
     public void whenArrayOfLength3IsPassedThenReturnTheSumOfAllElementValues(){
         assertEquals(6, Sum3.sum3(arrayCase1));
+
+        //lazy
+        assertEquals(18, Sum3.sum3(arrayCase2));
+        assertEquals(7, Sum3.sum3(arrayCase3));
     }
 
 }
