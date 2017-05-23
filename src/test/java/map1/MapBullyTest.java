@@ -21,12 +21,11 @@ import static org.junit.Assert.assertTrue;
  */
 public class MapBullyTest {
 
-    //private Map<String, String> map;
+    private Map<String, String> map =  new HashMap<>();
+    private Map<String, String> map1 =  new HashMap<>();
 
     @Test
     public void whenAnEmptyMapIsPassedThenReturnEmptyMap(){
-
-        Map<String, String> map =  new HashMap<>();
 
         assertTrue(MapBully.mapBully(map).isEmpty());
 
@@ -36,7 +35,6 @@ public class MapBullyTest {
     @Test
     public void whenKeyAIsPassedWithNoValueThenReturnMapAsIs(){
 
-        Map<String, String> map  = new HashMap<>();
         map.put("a", "");
 
         assertEquals(map, MapBully.mapBully(map));
@@ -46,10 +44,8 @@ public class MapBullyTest {
     @Test
     public void whenKeyAWithValueIsPassedThenReturnBWithValueOfA(){
 
-        Map<String, String> map  = new HashMap<>();
         map.put("a", "candy");
 
-        Map<String, String> map1  = new HashMap<>();
         map1.put("a", "");
         map1.put("b", "candy");
 
@@ -60,11 +56,11 @@ public class MapBullyTest {
     @Test
     public void artyTest3(){
 
-        Map<String, String> map  = new HashMap<>();
+//        Map<String, String> map  = new HashMap<>();
         map.put("a", "candy");
         map.put("b", "dirt");
 
-        Map<String, String> map1  = new HashMap<>();
+//        Map<String, String> map1  = new HashMap<>();
         map1.put("a", "");
         map1.put("b", "candy");
 
@@ -75,12 +71,10 @@ public class MapBullyTest {
     @Test
     public void artyTest4(){
 
-        Map<String, String> map  = new HashMap<>();
         map.put("a", "candy");
         map.put("b", "carrot");
         map.put("c", "meh");
 
-        Map<String, String> map1  = new HashMap<>();
         map1.put("a", "");
         map1.put("b", "candy");
         map1.put("c", "meh");
@@ -91,10 +85,8 @@ public class MapBullyTest {
 
     @Test
     public void artyTest5(){
-        Map<String, String> map  = new HashMap<>();
         map.put("b", "carrot");
 
-        Map<String, String> map1  = new HashMap<>();
         map1.put("b", "carrot");
 
         assertEquals(map1, MapBully.mapBully(map));
