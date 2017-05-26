@@ -9,7 +9,7 @@ public class Double23 {
         if (nums.length > 0){
             if (nums.length == 2){
 
-                if (nums[0] == 2 || nums[0] == 3){
+                if (nums[0] == 2 || nums[0] == 3){ //can do better than this lol....
                     if (nums[0] == nums[1]){
                         return true;
                     }
