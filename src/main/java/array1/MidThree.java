@@ -8,10 +8,11 @@ public class MidThree {
 
         if (nums.length > 2){
             if (nums.length % 2 != 0){
-                int middleValue = nums[(nums.length - 1) / 2];
-                int leftValue = nums[(nums.length - 1 ) / 2 - 1];
+                int middleIndex = (nums.length - 1) / 2;
+                int leftIndex = ((nums.length - 1) / 2) - 1;
+                int rightIndex = ((nums.length - 1) / 2) + 1;
 
-                return new int[]{nums[middleValue - 2], nums[middleValue - 1], nums[middleValue]};
+                return new int[]{nums[leftIndex], nums[middleIndex], nums[rightIndex]};
             }
         }
 
