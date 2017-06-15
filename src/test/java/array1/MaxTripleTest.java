@@ -48,8 +48,7 @@ public class MaxTripleTest {
 
         array = new int[]{1, 2, 3};
 
-        assertEquals(3, MaxTriple.maxTriple(array
-        ));
+        assertEquals(3, MaxTriple.maxTriple(array));
 
     }
 }
