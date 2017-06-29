@@ -5,6 +5,4 @@ jdk:
 notifications:
   slack:
     rooms:
-      - pictopage:GgJNEnLcl4annmdzEwdCVbqY#general
       - pictopage:GgJNEnLcl4annmdzEwdCVbqY#random
-      - pictopage:GgJNEnLcl4annmdzEwdCVbqY#slack-group-v3
