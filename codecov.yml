@@ -1,2 +1,13 @@
 codecov:
   token: 13b1f45f-69f8-4505-b81b-8b72529222fd
+
+coverage:
+  notify:
+    slack:
+      default:
+        url: "https://hooks.slack.com/services/abc/123"
+        threshold: 1%
+        only_pulls: false
+        branches: null
+        flags: null
+        paths: null
