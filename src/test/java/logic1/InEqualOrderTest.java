@@ -1,5 +1,11 @@
 package logic1;
 
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 /**
  * Created by Artemas on 30/06/2017.
  *
@@ -14,4 +20,32 @@ package logic1;
  * inOrderEqual(5, 5, 7, true) → true
  */
 public class InEqualOrderTest {
+
+    @Test
+    public void whenAllNumbersAreInIncreasingOrderAndEqualOkIsFalseThenReturnTrue(){
+        assertTrue(InEqualOrder.inEqualOrder(1, 2, 3, false));
+    }
+
+    @Test
+    public void whenAllNumbersAreDecreasingOrderAndEqualOkIsFalseThenReturnFalse(){
+        assertFalse(InEqualOrder.inEqualOrder(3, 2, 1, false));
+    }
+
+    @Test
+    public void whenTheLastNumberIsSmallerThanTheMiddleNumberAndEqualOkIsFalseThenReturnFalse(){
+        assertFalse(InEqualOrder.inEqualOrder(4, 6, 2, false));
+    }
+
+    @Test
+    public void whenBothNumbersAreEqualAndTheLastNumberIsGreaterAndEqualOkIsTrueThenReturnTrue(){
+        assertTrue(InEqualOrder.inEqualOrder(1, 1, 2, true));
+    }
+
+    @Test
+    public void whenBothNumbersAreEqualAndTheLastNumberIsGreaterAndEqualOkIsFalseThenReturnFalse(){
+        assertFalse(InEqualOrder.inEqualOrder(1, 1, 2, false));
+    }
+
+
+
 }
