@@ -6,17 +6,7 @@ package logic1;
 public class LastDigit {
     public static boolean lastDigit(int a, int b, int c) {
 
-        int firstSum = 0;
-        int secSum = 0;
-
-        Math.abs(firstSum = a - b);
-        Math.abs(secSum = a - c);
-
-        if ( (firstSum % a) == (firstSum % b) ){
-            return true;
-        }
-
-        return false;
+        return (a % 10 == b % 10) || (a % 10 == c % 10) || (b % 10 == c % 10);
 
     }
 }
