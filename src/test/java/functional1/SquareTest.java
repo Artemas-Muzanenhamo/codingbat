@@ -1,5 +1,6 @@
 package functional1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -19,15 +20,22 @@ import static junit.framework.TestCase.assertTrue;
  */
 public class SquareTest {
 
+    private Square square;
+
     List<Integer> expectedNum;
     List<Integer> actualNum;
+
+    @Before
+    public void init(){
+        square = new Square();
+    }
 
     @Test
     public void whenAnEmptyListIsPassedThenReturnTheListAsIs(){
         actualNum = new ArrayList<>();
         expectedNum = new ArrayList<>();
 
-        assertEquals(expectedNum, Square.square(actualNum));
+        assertEquals(expectedNum, square.square(actualNum));
     }
 
     @Test
@@ -39,7 +47,7 @@ public class SquareTest {
         expectedNum = new ArrayList<>();
         expectedNum.add(4);
 
-        assertEquals(expectedNum, Square.square(actualNum));
+        assertEquals(expectedNum, square.square(actualNum));
     }
 
     @Test
@@ -55,7 +63,7 @@ public class SquareTest {
         expectedNum.add(4);
         expectedNum.add(9);
 
-        assertEquals(expectedNum, Square.square(actualNum));
+        assertEquals(expectedNum, square.square(actualNum));
     }
 
 }

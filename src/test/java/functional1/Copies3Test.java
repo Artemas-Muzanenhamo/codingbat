@@ -1,5 +1,6 @@
 package functional1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -18,8 +19,15 @@ import static junit.framework.TestCase.assertEquals;
  */
 public class Copies3Test {
 
+    private Copies3 copies3;
+
     List<String> actualStrings;
     List<String> expectedString;
+
+    @Before
+    public void init(){
+        copies3 = new Copies3();
+    }
 
     @Test
     public void whenAnEmptyStringInAListIsPassedThenReturnListAsIs(){
@@ -27,7 +35,7 @@ public class Copies3Test {
         actualStrings = new ArrayList<>();
         expectedString = new ArrayList<>();
 
-        assertEquals(expectedString, Copies3.copies3(actualStrings));
+        assertEquals(expectedString, copies3.copies3(actualStrings));
     }
 
     @Test
@@ -39,7 +47,7 @@ public class Copies3Test {
         expectedString = new ArrayList<>();
         expectedString.add("aaa");
 
-        assertEquals(expectedString, Copies3.copies3(actualStrings));
+        assertEquals(expectedString, copies3.copies3(actualStrings));
 
     }
 
@@ -56,7 +64,7 @@ public class Copies3Test {
         expectedString.add("bbbbbb");
         expectedString.add("ccccccccc");
 
-        assertEquals(expectedString, Copies3.copies3(actualStrings));
+        assertEquals(expectedString, copies3.copies3(actualStrings));
 
     }
 

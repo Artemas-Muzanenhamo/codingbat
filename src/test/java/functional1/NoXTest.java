@@ -1,5 +1,6 @@
 package functional1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -19,8 +20,15 @@ import static junit.framework.TestCase.assertEquals;
  */
 public class NoXTest {
 
+    private NoX noX;
+
     List<String> actualString;
     List<String> expectedString;
+
+    @Before
+    public void init(){
+        noX = new NoX();
+    }
 
     @Test
     public void whenAStringInAListContains_X_ThenReturnTheStringWithoutAn_X_(){
@@ -31,7 +39,7 @@ public class NoXTest {
         expectedString = new ArrayList<>();
         expectedString.add("");
 
-        assertEquals(expectedString, NoX.noX(actualString));
+        assertEquals(expectedString, noX.noX(actualString));
     }
 
     @Test
@@ -47,6 +55,6 @@ public class NoXTest {
         expectedString.add("bb");
         expectedString.add("c");
 
-        assertEquals(expectedString, NoX.noX(actualString));
+        assertEquals(expectedString, noX.noX(actualString));
     }
 }

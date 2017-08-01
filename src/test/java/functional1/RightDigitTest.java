@@ -1,5 +1,6 @@
 package functional1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -19,8 +20,15 @@ import static junit.framework.TestCase.assertEquals;
  */
 public class RightDigitTest {
 
+    private RightDigit rightDigit;
+
     List<Integer> actualNumber;
     List<Integer> expectedNumber;
+
+    @Before
+    public void init(){
+        rightDigit = new RightDigit();
+    }
 
     @Test
     public void whenANumberInAListIsPassedThenReturnTheRightMostDigit(){
@@ -31,7 +39,7 @@ public class RightDigitTest {
         expectedNumber = new ArrayList<>();
         expectedNumber.add(2);
 
-        assertEquals(expectedNumber, RightDigit.rightDigit(actualNumber));
+        assertEquals(expectedNumber, rightDigit.rightDigit(actualNumber));
 
     }
 
@@ -52,7 +60,7 @@ public class RightDigitTest {
         expectedNumber.add(0);
         expectedNumber.add(1);
 
-        assertEquals(expectedNumber, RightDigit.rightDigit(actualNumber));
+        assertEquals(expectedNumber, rightDigit.rightDigit(actualNumber));
 
     }
 

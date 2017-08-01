@@ -6,7 +6,7 @@ import java.util.List;
  * Created by artemasm on 27/07/2017.
  */
 public class Square {
-    public static List<Integer> square(List<Integer> nums) {
+    public List<Integer> square(List<Integer> nums) {
 
         nums.replaceAll(n -> n * n);
         return nums;

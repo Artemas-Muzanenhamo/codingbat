@@ -1,5 +1,6 @@
 package functional1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -18,8 +19,15 @@ import static junit.framework.TestCase.assertEquals;
  */
 public class Math1Test {
 
+    private Math1 math1;
+
     List<Integer> actualNum;
     List<Integer> expectedNum;
+
+    @Before
+    public void init(){
+        math1 = new Math1();
+    }
 
     @Test
     public void whenANumberInAListIsPassedThenReturnThenNumberAddedTo_1_And_MultipliedBy10(){
@@ -30,7 +38,7 @@ public class Math1Test {
         expectedNum = new ArrayList<>();
         expectedNum.add(20);
 
-        assertEquals(expectedNum, Math1.math(actualNum));
+        assertEquals(expectedNum, math1.math(actualNum));
 
     }
 
@@ -47,7 +55,7 @@ public class Math1Test {
         expectedNum.add(30);
         expectedNum.add(40);
 
-        assertEquals(expectedNum, Math1.math(actualNum));
+        assertEquals(expectedNum, math1.math(actualNum));
 
     }
 }

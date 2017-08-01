@@ -1,5 +1,6 @@
 package functional1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 
@@ -19,8 +20,15 @@ import static org.junit.Assert.assertEquals;
  */
 public class LowerTest {
 
+    private Lower lower;
+
     List<String> actualString;
     List<String> expectedString;
+
+    @Before
+    public void init(){
+        lower = new Lower();
+    }
 
     @Test
     public void whenAStringInAListIsPassedThenReturnTheStringToLowerCase(){
@@ -31,7 +39,7 @@ public class LowerTest {
         expectedString = new ArrayList<>();
         expectedString.add("hello");
 
-        assertEquals(expectedString, Lower.lower(actualString));
+        assertEquals(expectedString, lower.lower(actualString));
     }
 
     @Test
@@ -51,7 +59,7 @@ public class LowerTest {
         expectedString.add("bbb");
         expectedString.add("ccc");
 
-        assertEquals(expectedString, Lower.lower(actualString));
+        assertEquals(expectedString, lower.lower(actualString));
 
     }
 

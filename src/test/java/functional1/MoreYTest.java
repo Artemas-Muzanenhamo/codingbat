@@ -1,5 +1,6 @@
 package functional1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -18,8 +19,15 @@ import static junit.framework.TestCase.assertEquals;
  */
 public class MoreYTest {
 
+    private MoreY moreY;
+
     List<String> expectedStrings;
     List<String> actualStrings;
+
+    @Before
+    public void init(){
+        moreY = new MoreY();
+    }
 
     @Test
     public void whenAnEmptyListIsPassedThenReturn_YY(){
@@ -27,7 +35,7 @@ public class MoreYTest {
         actualStrings = new ArrayList<>();
         expectedStrings = new ArrayList<>();
 
-        assertEquals(expectedStrings, MoreY.moreY(actualStrings));
+        assertEquals(expectedStrings, moreY.moreY(actualStrings));
     }
 
     @Test
@@ -39,7 +47,7 @@ public class MoreYTest {
         expectedStrings = new ArrayList<>();
         expectedStrings.add("yartemasy");
 
-        assertEquals(expectedStrings, MoreY.moreY(actualStrings));
+        assertEquals(expectedStrings, moreY.moreY(actualStrings));
 
     }
 

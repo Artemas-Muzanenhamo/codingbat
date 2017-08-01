@@ -1,5 +1,6 @@
 package functional1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -19,8 +20,15 @@ import static junit.framework.TestCase.assertEquals;
  */
 public class AddStarTest {
 
+    private AddStar addStar;
+
     List<String> expectedString;
     List<String> actualString;
+
+    @Before
+    public void init(){
+        addStar = new AddStar();
+    }
 
     @Test
     public void whenAnEmptyListIsPassedThenReturnAStar(){
@@ -28,7 +36,7 @@ public class AddStarTest {
         actualString = new ArrayList<>();
         expectedString = new ArrayList<>();
 
-        assertEquals(expectedString, AddStar.addStart(actualString));
+        assertEquals(expectedString, addStar.addStart(actualString));
 
     }
 
@@ -45,7 +53,7 @@ public class AddStarTest {
         expectedString.add("bb*");
         expectedString.add("ccc*");
 
-        assertEquals(expectedString, AddStar.addStart(actualString));
+        assertEquals(expectedString, addStar.addStart(actualString));
     }
 
 }

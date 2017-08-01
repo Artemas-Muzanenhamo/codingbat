@@ -1,5 +1,6 @@
 package functional1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -20,8 +21,15 @@ import static junit.framework.TestCase.assertTrue;
  */
 public class DoublingTest {
 
+    private Doubling doubling;
+
     List<Integer> actualNumbers;
     List<Integer> expectedNumbers;
+
+    @Before
+    public void init(){
+        doubling = new Doubling();
+    }
 
     @Test
     public void whenANumberIsPassedThenReturnTheNumberMultiplied(){
@@ -32,7 +40,7 @@ public class DoublingTest {
         expectedNumbers = new ArrayList<>();
         expectedNumbers.add(10);
 
-        assertEquals(expectedNumbers, Doubling.doubling(actualNumbers));
+        assertEquals(expectedNumbers, doubling.doubling(actualNumbers));
     }
 
     @Test
@@ -44,7 +52,7 @@ public class DoublingTest {
         expectedNumbers = new ArrayList<>();
         expectedNumbers.add(0);
 
-        assertEquals(expectedNumbers, Doubling.doubling(actualNumbers));
+        assertEquals(expectedNumbers, doubling.doubling(actualNumbers));
     }
 
     @Test
@@ -60,7 +68,7 @@ public class DoublingTest {
         expectedNumbers.add(4);
         expectedNumbers.add(6);
 
-        assertEquals(expectedNumbers, Doubling.doubling(actualNumbers));
+        assertEquals(expectedNumbers, doubling.doubling(actualNumbers));
 
     }
 }
