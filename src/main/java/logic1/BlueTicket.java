@@ -4,7 +4,7 @@ package logic1;
  * Created by Artemas on 07/07/2017.
  */
 public class BlueTicket {
-    public static int blueTicket(int a, int b, int c) {
+    public int blueTicket(int a, int b, int c) {
 
         int ab = a + b;
         int bc = b + c;

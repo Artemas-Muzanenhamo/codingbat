@@ -1,5 +1,6 @@
 package logic1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -23,25 +24,32 @@ import static org.junit.Assert.assertTrue;
  * answerCell(true, false, false) → false
  */
 public class AnswerCellTest {
+    
+    private AnswerCell answerCell;
+    
+    @Before
+    public void init(){
+        answerCell = new AnswerCell();
+    }
 
     @Test
     public void whenNotMorningNotMomAndNotSleepingThenReturnTrue(){
-        assertTrue(AnswerCell.answerCell(false, false, false));
+        assertTrue(answerCell.answerCell(false, false, false));
     }
 
     @Test
     public void whenItsMorningAndNotMomAndNotAsleepThenReturnFalse(){
-        assertFalse(AnswerCell.answerCell(true, false, false));
+        assertFalse(answerCell.answerCell(true, false, false));
     }
 
     @Test
     public void whenItsMorningAndIsMomAndNotAsleepThenReturnTrue(){
-        assertTrue(AnswerCell.answerCell(true, true, false));
+        assertTrue(answerCell.answerCell(true, true, false));
     }
 
     @Test
     public void whenItsNotMorningNotMomAndAsleepThenReturnFalse(){
-        assertFalse(AnswerCell.answerCell(false, false, true));
+        assertFalse(answerCell.answerCell(false, false, true));
     }
 
 

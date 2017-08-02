@@ -1,5 +1,6 @@
 package logic1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -24,25 +25,32 @@ import static org.junit.Assert.assertEquals;
  * fizzString2(3) → "Fizz!"
  */
 public class FizzString2Test {
+    
+    private FizzString2 fizzString2;
+    
+    @Before
+    public void init(){
+        fizzString2 = new FizzString2();
+    }
 
     @Test
     public void whenTheNumberPassedInIsNotAMultipleOf3ThenReturnTheNumberStringExclaimed(){
-        assertEquals("1!", FizzString2.fizzString(1));
+        assertEquals("1!", fizzString2.fizzString(1));
     }
 
     @Test
     public void whenTheNumberPassedInIsAMultipleOf3ThenReturnFizzExclaimed(){
-        assertEquals("Fizz!", FizzString2.fizzString(3));
+        assertEquals("Fizz!", fizzString2.fizzString(3));
     }
 
     @Test
     public void whenTheNumberPassedInIsAMultipleOf5ThenReturnBuzzExclaimed(){
-        assertEquals("Buzz!", FizzString2.fizzString(5));
+        assertEquals("Buzz!", fizzString2.fizzString(5));
     }
 
     @Test
     public void whenTheNumberPassedInIsBothDivisibleBy3And5ThenReturnFizzBuzzExclaimed(){
-        assertEquals("FizzBuzz!", FizzString2.fizzString(15));
+        assertEquals("FizzBuzz!", fizzString2.fizzString(15));
     }
 
 }

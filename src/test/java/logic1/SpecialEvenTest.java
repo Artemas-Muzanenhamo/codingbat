@@ -1,5 +1,6 @@
 package logic1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertFalse;
@@ -17,16 +18,23 @@ import static junit.framework.TestCase.assertTrue;
  * specialEleven(24) → false
  */
 public class SpecialEvenTest {
+    
+    private SpecialEven specialEven;
+    
+    @Before
+    public void init(){
+        specialEven = new SpecialEven();
+    }
 
     @Test
     public void whenNumberPassedInIsAMultipleOf11ThenReturnTrue(){
-        assertTrue(SpecialEven.specialEven(22));
+        assertTrue(specialEven.specialEven(22));
     }
 
     @Test
     public void whenNumberPassedInIsOneMoreThanTheMultipleOf11ThenReturnTrue(){
-        assertTrue(SpecialEven.specialEven(23));
+        assertTrue(specialEven.specialEven(23));
         // lazy
-        assertFalse(SpecialEven.specialEven(24));
+        assertFalse(specialEven.specialEven(24));
     }
 }

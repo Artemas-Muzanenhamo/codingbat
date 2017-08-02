@@ -4,7 +4,7 @@ package logic1;
  * Created by Artemas on 07/07/2017.
  */
 public class SumLimit {
-    public static int sumLimit(int a, int b) {
+    public int sumLimit(int a, int b) {
 
         int sum = a + b;
         int aLength = String.valueOf(a).length();

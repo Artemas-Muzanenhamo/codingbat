@@ -1,5 +1,6 @@
 package logic1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertTrue;
@@ -16,29 +17,36 @@ import static junit.framework.TestCase.assertTrue;
  * nearTen(19) → true
  */
 public class NearTenTest {
+    
+    private NearTen nearTen;
+    
+    @Before
+    public void init(){
+        nearTen = new NearTen();
+    }
 
     @Test
     public void whenTheNumberPassedInIs2MoreOfAMultipleOf10ThenReturnTrue(){
-        assertTrue(NearTen.nearTen(12));
+        assertTrue(nearTen.nearTen(12));
     }
 
     @Test
     public void whenTheNumberPassedInIs2LessOfAMultipleOf10ThenReturnTrue(){
-        assertTrue(NearTen.nearTen(18));
+        assertTrue(nearTen.nearTen(18));
     }
 
     @Test
     public void whenTheNumberPassedInIs1MoreOfAMultipleOf10ThenReturnTrue(){
-        assertTrue(NearTen.nearTen(11));
+        assertTrue(nearTen.nearTen(11));
     }
 
     @Test
     public void whenTheNumberPassedInIs1LessOfAMultipleOf10ThenReturnTrue(){
-        assertTrue(NearTen.nearTen(19));
+        assertTrue(nearTen.nearTen(19));
     }
 
     @Test
     public void whenTheNumberPassedInIsAMultipleOf10ThenReturnTrue(){
-        assertTrue(NearTen.nearTen(20));
+        assertTrue(nearTen.nearTen(20));
     }
 }

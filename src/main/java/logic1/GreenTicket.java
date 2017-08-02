@@ -4,7 +4,7 @@ package logic1;
  * Created by Artemas on 07/07/2017.
  */
 public class GreenTicket {
-    public static int greenTicket(int a, int b, int c) {
+    public int greenTicket(int a, int b, int c) {
 
         if (a == b && b == c){
             return 20;

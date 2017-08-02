@@ -1,5 +1,6 @@
 package logic1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -23,19 +24,26 @@ import static org.junit.Assert.assertEquals;
  */
 public class FizzStringTest {
 
+    private FizzString fizzString;
+
+    @Before
+    public void init(){
+        fizzString = new FizzString();
+    }
+
     @Test
     public void whenStringPassedInStartsWithFThenReturnFizz(){
-        assertEquals("Fizz", FizzString.fizzString("fig"));
+        assertEquals("Fizz", fizzString.fizzString("fig"));
     }
 
     @Test
     public void whenStringPassedInEndsWithBThenReturnBuzz(){
-        assertEquals("Buzz", FizzString.fizzString("dib"));
+        assertEquals("Buzz", fizzString.fizzString("dib"));
     }
 
     @Test
     public void whenStringPassedInContainsBothFAndBThenReturnFizzBuzz(){
-        assertEquals("FizzBuzz", FizzString.fizzString("fib"));
+        assertEquals("FizzBuzz", fizzString.fizzString("fib"));
     }
 
 }

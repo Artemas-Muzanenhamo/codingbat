@@ -4,7 +4,7 @@ package logic1;
  * Created by artemasm on 28/06/2017.
  */
 public class TeaParty {
-    public static int teaParty(int tea, int candy) {
+    public int teaParty(int tea, int candy) {
 
         if (tea < 5 || candy < 5){
             return 0;

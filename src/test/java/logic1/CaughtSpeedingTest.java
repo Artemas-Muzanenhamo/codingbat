@@ -1,5 +1,6 @@
 package logic1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -23,34 +24,41 @@ import static org.junit.Assert.assertEquals;
  * caughtSpeeding(65, true) → 0
  */
 public class CaughtSpeedingTest {
+    
+    private CaughtSpeeding caughtSpeeding;
+    
+    @Before
+    public void init(){
+        caughtSpeeding = new CaughtSpeeding();
+    }
 
     @Test
     public void whenSpeedIsLessThan60ThenReturn0(){
-        assertEquals(0, CaughtSpeeding.caughtSpeeding(50, false));
+        assertEquals(0, caughtSpeeding.caughtSpeeding(50, false));
 
-        assertEquals(0, CaughtSpeeding.caughtSpeeding(60, false));
+        assertEquals(0, caughtSpeeding.caughtSpeeding(60, false));
     }
 
     @Test
     public void whenSpeedIsMoreThan60ButLessThan80AndNotYourBirthdayThenReturn1(){
-        assertEquals(1, CaughtSpeeding.caughtSpeeding(61, false));
+        assertEquals(1, caughtSpeeding.caughtSpeeding(61, false));
 
-        assertEquals(1, CaughtSpeeding.caughtSpeeding(80, false));
+        assertEquals(1, caughtSpeeding.caughtSpeeding(80, false));
     }
 
     @Test
     public void whenSpeedIsMoreThan80AndItsNotYourBirthdayThenReturn2(){
-        assertEquals(2, CaughtSpeeding.caughtSpeeding(85, false));
+        assertEquals(2, caughtSpeeding.caughtSpeeding(85, false));
     }
 
     @Test
     public void whenSpeedIs65AndItsYourBirthdayThenReturn0(){
-        assertEquals(0, CaughtSpeeding.caughtSpeeding(65, true));
+        assertEquals(0, caughtSpeeding.caughtSpeeding(65, true));
     }
 
     @Test
     public void whenSpeedIs85AndItsYourBirthdayThenReturn1(){
-        assertEquals(1, CaughtSpeeding.caughtSpeeding(85, true));
+        assertEquals(1, caughtSpeeding.caughtSpeeding(85, true));
     }
 
 }

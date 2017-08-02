@@ -1,5 +1,6 @@
 package logic1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
@@ -19,14 +20,21 @@ import static org.junit.Assert.assertTrue;
  */
 public class LastDigitTest {
 
+    private LastDigit lastDigit;
+    
+    @Before
+    public void init(){
+        lastDigit = new LastDigit();
+    }
+
     @Test
     public void whenTheFirstTwoNumbersHaveTheRightMostDigitThenReturnTrue(){
-        assertTrue(LastDigit.lastDigit(23, 13, 9));
+        assertTrue(lastDigit.lastDigit(23, 13, 9));
     }
 
     @Test
     public void whenTheFirstAndLastNumbersHaveTheRightMostDigitThenReturnTrue(){
-        assertTrue(LastDigit.lastDigit(23, 19, 13));
+        assertTrue(lastDigit.lastDigit(23, 19, 13));
     }
 
 }

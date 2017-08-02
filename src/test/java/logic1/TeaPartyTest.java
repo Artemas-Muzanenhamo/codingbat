@@ -1,5 +1,6 @@
 package logic1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -22,19 +23,26 @@ import static org.junit.Assert.assertFalse;
  * teaParty(20, 6) → 2
  */
 public class TeaPartyTest {
+    
+    private TeaParty teaParty;
+    
+    @Before
+    public void init(){
+        teaParty = new TeaParty();
+    }
 
     @Test
     public void whenEitherTeaOrCandyAreBelow5ThenReturn0(){
-        assertEquals(0, TeaParty.teaParty(3, 8));
+        assertEquals(0, teaParty.teaParty(3, 8));
     }
 
     @Test
     public void whenCandyAndTeaAreGreaterThan5ThenReturn1(){
-        assertEquals(1, TeaParty.teaParty(5, 9));
+        assertEquals(1, teaParty.teaParty(5, 9));
     }
 
     @Test
     public void whenCandyIsDoubleTheAmountOfTeaThenReturn2(){
-        assertEquals(2, TeaParty.teaParty(5, 10));
+        assertEquals(2, teaParty.teaParty(5, 10));
     }
 }

@@ -1,5 +1,6 @@
 package logic1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -17,14 +18,21 @@ import static org.junit.Assert.assertTrue;
  * shareDigit(12, 44) → false
  */
 public class ShareDigitTest {
+    
+    private ShareDigit shareDigit;
+    
+    @Before
+    public void init(){
+        shareDigit = new ShareDigit();
+    }
 
     @Test
     public void whenValuesPassedInHaveNumbersThatAppearInBothValuesTheReturnTrue(){
-        assertTrue(ShareDigit.shareDigit(12, 23));
+        assertTrue(shareDigit.shareDigit(12, 23));
     }
 
     @Test
     public void whenValuesPassedInDoNotHaveNumbersThatAppearInBothValuesTheReturnFalse(){
-        assertFalse(ShareDigit.shareDigit(12, 44));
+        assertFalse(shareDigit.shareDigit(12, 44));
     }
 }

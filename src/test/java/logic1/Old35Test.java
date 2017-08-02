@@ -1,5 +1,6 @@
 package logic1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertFalse;
@@ -16,20 +17,27 @@ import static junit.framework.TestCase.assertTrue;
  * old35(15) → false
  */
 public class Old35Test {
+    
+    private Old35 old35;
+    
+    @Before
+    public void init(){
+        old35 = new Old35();
+    }
 
     @Test
     public void whenTheNumberPassedInIsAMultipleOfOnly3ThenReturnTrue(){
-        assertTrue(Old35.old35(3));
+        assertTrue(old35.old35(3));
     }
 
     @Test
     public void whenTheNumberPassedInIsAMultipleOfOnly5ThenReturnTrue(){
-        assertTrue(Old35.old35(5));
+        assertTrue(old35.old35(5));
     }
 
     @Test
     public void whenTheNumberPassedInIsAMutipleFor3And5ThenReturnFalse(){
-        assertFalse(Old35.old35(15));
+        assertFalse(old35.old35(15));
     }
 
 }

@@ -1,5 +1,6 @@
 package logic1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -20,14 +21,21 @@ import static org.junit.Assert.assertTrue;
  * sumLimit(8, 1) → 9
  */
 public class SumLimitTest {
+    
+    private SumLimit sumLimit;
+    
+    @Before
+    public void init(){
+        sumLimit = new SumLimit();
+    }
 
     @Test
     public void whenTheTwoValuesArePassedThenReturnTheSumIfItHasTheSameValueAs_a(){
-        assertEquals(5, SumLimit.sumLimit(2, 3));
+        assertEquals(5, sumLimit.sumLimit(2, 3));
     }
 
     @Test
     public void whenTheSumHasMoreDigitsThan_A_ThenReturnAWithout_B_(){
-        assertEquals(8, SumLimit.sumLimit(8, 3));
+        assertEquals(8, sumLimit.sumLimit(8, 3));
     }
 }

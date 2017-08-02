@@ -1,5 +1,6 @@
 package logic1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -20,30 +21,37 @@ import static org.junit.Assert.assertTrue;
  * inOrderEqual(5, 5, 7, true) → true
  */
 public class InEqualOrderTest {
+    
+    private InEqualOrder inEqualOrder;
+    
+    @Before
+    public void init(){
+        inEqualOrder = new InEqualOrder();
+    }
 
     @Test
     public void whenAllNumbersAreInIncreasingOrderAndEqualOkIsFalseThenReturnTrue(){
-        assertTrue(InEqualOrder.inEqualOrder(1, 2, 3, false));
+        assertTrue(inEqualOrder.inEqualOrder(1, 2, 3, false));
     }
 
     @Test
     public void whenAllNumbersAreDecreasingOrderAndEqualOkIsFalseThenReturnFalse(){
-        assertFalse(InEqualOrder.inEqualOrder(3, 2, 1, false));
+        assertFalse(inEqualOrder.inEqualOrder(3, 2, 1, false));
     }
 
     @Test
     public void whenTheLastNumberIsSmallerThanTheMiddleNumberAndEqualOkIsFalseThenReturnFalse(){
-        assertFalse(InEqualOrder.inEqualOrder(4, 6, 2, false));
+        assertFalse(inEqualOrder.inEqualOrder(4, 6, 2, false));
     }
 
     @Test
     public void whenBothNumbersAreEqualAndTheLastNumberIsGreaterAndEqualOkIsTrueThenReturnTrue(){
-        assertTrue(InEqualOrder.inEqualOrder(1, 1, 2, true));
+        assertTrue(inEqualOrder.inEqualOrder(1, 1, 2, true));
     }
 
     @Test
     public void whenBothNumbersAreEqualAndTheLastNumberIsGreaterAndEqualOkIsFalseThenReturnFalse(){
-        assertFalse(InEqualOrder.inEqualOrder(1, 1, 2, false));
+        assertFalse(inEqualOrder.inEqualOrder(1, 1, 2, false));
     }
 
 

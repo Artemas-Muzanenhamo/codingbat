@@ -1,5 +1,6 @@
 package logic1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -23,14 +24,21 @@ import static org.junit.Assert.assertEquals;
  */
 public class BlueTicketTest {
 
+    private BlueTicket blueTicket;
+
+    @Before
+    public void init(){
+        blueTicket = new BlueTicket();
+    }
+
     @Test
     public void whenAnyPairSumsToExactly10ThenReturn10(){
-        assertEquals(10, BlueTicket.blueTicket(9, 1, 0));
+        assertEquals(10, blueTicket.blueTicket(9, 1, 0));
     }
 
     @Test
     public void when_AB_SumIsExactly10MoreThanEither_BC_Or_AC_ThenReturn5(){
-        assertEquals(5, BlueTicket.blueTicket(20, 30, 10));
+        assertEquals(5, blueTicket.blueTicket(20, 30, 10));
     }
 
 }

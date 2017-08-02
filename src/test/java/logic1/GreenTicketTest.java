@@ -1,5 +1,6 @@
 package logic1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -20,23 +21,30 @@ import static org.junit.Assert.assertEquals;
  * greenTicket(1, 1, 2) → 10
  */
 public class GreenTicketTest {
+    
+    private GreenTicket greenTicket;
+    
+    @Before
+    public void init(){
+        greenTicket = new GreenTicket();
+    }
 
     @Test
     public void whenAllTheNumbersAreDifferentThenReturn0(){
-        assertEquals(0, GreenTicket.greenTicket(1, 2, 3));
+        assertEquals(0, greenTicket.greenTicket(1, 2, 3));
     }
 
     @Test
     public void whenAllTheNumbersAreTheSameThenReturn20(){
-        assertEquals(20, GreenTicket.greenTicket(2, 2, 2));
+        assertEquals(20, greenTicket.greenTicket(2, 2, 2));
     }
 
     @Test
     public void whenTwoOfTheNumbersAreTheSameThenReturn10(){
-        assertEquals(10, GreenTicket.greenTicket(1, 1, 2));
+        assertEquals(10, greenTicket.greenTicket(1, 1, 2));
 
         //lazy
-        assertEquals(10, GreenTicket.greenTicket(1, 2, 1));
-        assertEquals(10, GreenTicket.greenTicket(1, 2, 2));
+        assertEquals(10, greenTicket.greenTicket(1, 2, 1));
+        assertEquals(10, greenTicket.greenTicket(1, 2, 2));
     }
 }

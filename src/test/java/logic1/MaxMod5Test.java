@@ -1,5 +1,6 @@
 package logic1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -20,24 +21,31 @@ import static org.junit.Assert.assertEquals;
  * maxMod5(3, 2) → 3
  */
 public class MaxMod5Test {
+    
+    private MaxMod5 maxMod5;
+    
+    @Before
+    public void init(){
+        maxMod5 = new MaxMod5();
+    }
 
     @Test
     public void whenTheLeftValuePassedIsGreaterThanTheRightValueThenReturnTheGreaterValue(){
-        assertEquals(6, MaxMod5.maxMod5(6, 2));
+        assertEquals(6, maxMod5.maxMod5(6, 2));
     }
 
     @Test
     public void whenTheRightValuePassedIsGreaterThanTheLeftValueThenReturnTheGreaterValue(){
-        assertEquals(6, MaxMod5.maxMod5(3, 6));
+        assertEquals(6, maxMod5.maxMod5(3, 6));
     }
 
     @Test
     public void whenBothValuesHaveTheSameRemainderWhenDividedBy5ThenReturnTheSmallerValue(){
-        assertEquals(3, MaxMod5.maxMod5(3, 8));
+        assertEquals(3, maxMod5.maxMod5(3, 8));
     }
 
     @Test
     public void whenBothValuesAreTheSameAndHaveTheSameRemainderThenReturn0(){
-        assertEquals(0, MaxMod5.maxMod5(7, 7));
+        assertEquals(0, maxMod5.maxMod5(7, 7));
     }
 }

@@ -1,5 +1,6 @@
 package logic1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -22,27 +23,34 @@ import static org.junit.Assert.assertEquals;
  * redTicket(0, 0, 0) → 5
  */
 public class RedTicketTest {
+    
+    private RedTicket redTicket;
+    
+    @Before
+    public void init(){
+        redTicket = new RedTicket();
+    }
 
     @Test
     public void whenAllTheValuesAre2ThenReturn10(){
-        assertEquals(10, RedTicket.redTicket(2, 2, 2));
+        assertEquals(10, redTicket.redTicket(2, 2, 2));
     }
 
     @Test
     public void whenAllTheValuesAreTheSameButNot2_2_2ThenReturn5(){
-        assertEquals(5, RedTicket.redTicket(3, 3, 3));
+        assertEquals(5, redTicket.redTicket(3, 3, 3));
     }
 
     @Test
     public void whenBothB_And_C_AreDifferentFromAThenReturn1(){
-        assertEquals(1, RedTicket.redTicket(1, 2, 2));
+        assertEquals(1, redTicket.redTicket(1, 2, 2));
 
-        assertEquals(1, RedTicket.redTicket(1, 2, 0));
+        assertEquals(1, redTicket.redTicket(1, 2, 0));
     }
 
     @Test
     public void whenAllTheValuesAreDifferentFromEachOtherThenReturn0(){
 
-        assertEquals(0, RedTicket.redTicket(2, 2, 1));
+        assertEquals(0, redTicket.redTicket(2, 2, 1));
     }
 }

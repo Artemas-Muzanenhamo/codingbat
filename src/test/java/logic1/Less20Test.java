@@ -1,5 +1,6 @@
 package logic1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertFalse;
@@ -18,18 +19,25 @@ import static junit.framework.TestCase.assertTrue;
  */
 public class Less20Test {
 
+    private Less20 less20;
+
+    @Before
+    public void init(){
+        less20 = new Less20();
+    }
+
     @Test
     public void whenNumberPassedInIs2LessThanTheMultipleOf20ThenReturnTrue(){
-        assertTrue(Less20.less20(18));
+        assertTrue(less20.less20(18));
     }
 
     @Test
     public void whenNumberPassedInIs1LessThanMultipleOf20ThenReturnTrue(){
-        assertTrue(Less20.less20(19));
+        assertTrue(less20.less20(19));
     }
 
     @Test
     public void whenNumberPassedInIsAMultipleOf20ThenReturnFalse(){
-        assertFalse(Less20.less20(20));
+        assertFalse(less20.less20(20));
     }
 }

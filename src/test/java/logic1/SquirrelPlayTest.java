@@ -1,5 +1,6 @@
 package logic1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -22,46 +23,53 @@ import static org.junit.Assert.assertTrue;
  * squirrelPlay(95, true) → true
  */
 public class SquirrelPlayTest {
+    
+    private SquirrelPlay squirrelPlay;
+    
+    @Before
+    public void init(){
+        squirrelPlay = new SquirrelPlay();
+    }
 
     @Test
     public void whenTemperatureIsBelow60AndNotSummerThenReturnFalse(){
 
-        assertFalse(SquirrelPlay.squirrelPlay(50, false));
+        assertFalse(squirrelPlay.squirrelPlay(50, false));
 
     }
 
     @Test
     public void whenTemperatureIsBelow60AndIsSummerThenReturnFalse(){
 
-        assertFalse(SquirrelPlay.squirrelPlay(50, true));
+        assertFalse(squirrelPlay.squirrelPlay(50, true));
 
     }
 
     @Test
     public void whenTemperatureIsAbove60AndNotSummerThenReturnTrue(){
 
-        assertTrue(SquirrelPlay.squirrelPlay(60, false));
+        assertTrue(squirrelPlay.squirrelPlay(60, false));
 
     }
 
     @Test
     public void whenTemperatureIsAbove60AndIsSummerThenReturnTrue(){
 
-        assertTrue(SquirrelPlay.squirrelPlay(70, true));
+        assertTrue(squirrelPlay.squirrelPlay(70, true));
 
     }
 
     @Test
     public void whenTemperatureIsAbove90AndIsNotSummerThenReturnFalse(){
 
-        assertFalse(SquirrelPlay.squirrelPlay(95, false));
+        assertFalse(squirrelPlay.squirrelPlay(95, false));
 
     }
 
     @Test
     public void whenTemperatureIsAbove90AndIsSummerThenReturnTrue(){
 
-        assertTrue(SquirrelPlay.squirrelPlay(95, true));
+        assertTrue(squirrelPlay.squirrelPlay(95, true));
 
     }
 

@@ -25,35 +25,37 @@ import static org.junit.Assert.assertEquals;
  */
 public class DateFashionTest {
 
+    private DateFashion dateFashion;
+
     @Test
     public void whenYouOrYourDateAre8OrMoreThenReturn2(){
 
-        assertEquals(2, DateFashion.dateFashion(8, 8));
+        assertEquals(2, dateFashion.dateFashion(8, 8));
     }
 
     @Test
     public void whenYourStyleIsLessThan3AndYourDateIsMoreThan8ThenReturn0(){
-        assertEquals(0, DateFashion.dateFashion(2, 9));
+        assertEquals(0, dateFashion.dateFashion(2, 9));
     }
 
     @Test
     public void whenYouAndYourDateAreLessThan3ThenReturn0(){
-        assertEquals(0, DateFashion.dateFashion(2, 1));
+        assertEquals(0, dateFashion.dateFashion(2, 1));
     }
 
     @Test
     public void whenYouAre5AndYourDateIs10ThenReturn2(){
-        assertEquals(2, DateFashion.dateFashion(5, 10));
+        assertEquals(2, dateFashion.dateFashion(5, 10));
     }
 
     @Test
     public void whenYouAre5AndYourDateIs2ThenReturn0(){
-        assertEquals(0, DateFashion.dateFashion(5, 2));
+        assertEquals(0, dateFashion.dateFashion(5, 2));
     }
 
     @Test
     public void whenYouAndYourDateAre5ThenReturn1(){
-        assertEquals(1, DateFashion.dateFashion(5, 5));
+        assertEquals(1, dateFashion.dateFashion(5, 5));
     }
 
 }

@@ -1,5 +1,6 @@
 package logic1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -15,20 +16,27 @@ import static org.junit.Assert.assertTrue;
  * twoAsOne(3, 2, 2) → false
  */
 public class TwoAsOneTest {
+    
+    private TwoAsOne twoAsOne;
+    
+    @Before
+    public void init(){
+        twoAsOne = new TwoAsOne();
+    }
 
     @Test
     public void whenTheFirstTwoIntegersAreEqualToTheThirdNumberThenReturnTrue(){
-        assertTrue(TwoAsOne.twoAsOne(1, 2, 3));
+        assertTrue(twoAsOne.twoAsOne(1, 2, 3));
     }
 
     @Test
     public void whenTheFirstAndTheLastIntegersAreEqualToTheMiddleNumberThenReturnTrue(){
-        assertTrue(TwoAsOne.twoAsOne(1, 3, 2));
+        assertTrue(twoAsOne.twoAsOne(1, 3, 2));
     }
 
     @Test
     public void whenTheMiddleAndTheLastIntegersAreEqualToTheFirstNumberThenReturnTrue(){
-        assertTrue(TwoAsOne.twoAsOne(3, 2, 1));
+        assertTrue(twoAsOne.twoAsOne(3, 2, 1));
     }
 
 }

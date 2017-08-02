@@ -1,5 +1,6 @@
 package logic1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -20,28 +21,35 @@ import static org.junit.Assert.assertTrue;
  */
 public class InOrderTest {
 
+    private InOrder inOrder;
+
+    @Before
+    public void init(){
+        inOrder = new InOrder();
+    }
+
     @Test
     public void whenBIsGreaterThanAAndBOKIsFalseThenReturnTrue(){
-        assertTrue(InOrder.inOrder(1, 2, 4, false));
+        assertTrue(inOrder.inOrder(1, 2, 4, false));
     }
 
     @Test
     public void whenBIsLessThanAAndBOKIsFalseThenReturnFalse(){
-        assertFalse(InOrder.inOrder(4, 2, 4, false));
+        assertFalse(inOrder.inOrder(4, 2, 4, false));
     }
 
     @Test
     public void whenCIsGreaterThanBAndBOKIsFalseThenReturnTrue(){
-        assertTrue(InOrder.inOrder(1, 2, 4, false));
+        assertTrue(inOrder.inOrder(1, 2, 4, false));
     }
 
     @Test
     public void whenCIsLessThanBAndBOKIsFalseThenReturnFalse(){
-        assertFalse(InOrder.inOrder(1, 4, 3, false));
+        assertFalse(inOrder.inOrder(1, 4, 3, false));
     }
 
     @Test
     public void whenBIsLessThanAAndBOKIsTrueThenReturnTrue(){
-        assertTrue(InOrder.inOrder(5, 4, 7, true));
+        assertTrue(inOrder.inOrder(5, 4, 7, true));
     }
 }

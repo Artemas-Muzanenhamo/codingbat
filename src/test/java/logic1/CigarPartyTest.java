@@ -1,5 +1,6 @@
 package logic1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -21,34 +22,41 @@ import static org.junit.Assert.assertTrue;
  * cigarParty(70, true) → true
  */
 public class CigarPartyTest {
+    
+    private CigarParty cigarParty;
+    
+    @Before
+    public void init(){
+        cigarParty = new CigarParty();
+    }
 
     @Test
     public void whenNumberOfCigarsIsLessThan30AndItsAWeekendThenReturnFalse(){
-        assertFalse(CigarParty.cigarParty(30, true));
+        assertFalse(cigarParty.cigarParty(30, true));
     }
 
     @Test
     public void whenNumberOfCigarsIsMoreThanOrEqualTo40AndItsAWeekendThenReturnTrue(){
-        assertTrue(CigarParty.cigarParty(40, true));
+        assertTrue(cigarParty.cigarParty(40, true));
     }
 
     @Test
     public void whenNumberOfCigarsIsMoreThan60AndItsAWeekendThenReturnTrue(){
-        assertTrue(CigarParty.cigarParty(100, true));
+        assertTrue(cigarParty.cigarParty(100, true));
     }
 
     @Test
     public void whenNumberOfCigarsIsMoreThanOrEqualTo40ThenReturnTrue(){
-        assertTrue(CigarParty.cigarParty(40, false));
+        assertTrue(cigarParty.cigarParty(40, false));
     }
 
     @Test
     public void whenNumberOfCigarsIsLessThanOrEqualTo60ThenReturnTrue(){
-        assertTrue(CigarParty.cigarParty(60, false));
+        assertTrue(cigarParty.cigarParty(60, false));
     }
 
     @Test
     public void whenNumberOfCigarsIsMoreThan60ThenReturnFalse(){
-        assertFalse(CigarParty.cigarParty(70, false));
+        assertFalse(cigarParty.cigarParty(70, false));
     }
 }

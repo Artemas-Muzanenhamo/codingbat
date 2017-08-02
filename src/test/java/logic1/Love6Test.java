@@ -1,5 +1,6 @@
 package logic1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertNotNull;
@@ -20,24 +21,31 @@ import static junit.framework.TestCase.assertTrue;
  */
 public class Love6Test {
 
+    private Love6 love6;
+
+    @Before
+    public void init(){
+        love6 = new Love6();
+    }
+
     @Test
     public void whenOneValueHasTheValue6ThenReturnTrue(){
-        assertTrue(Love6.love6(6, 4));
+        assertTrue(love6.love6(6, 4));
         // lazy
-        assertTrue(Love6.love6(4, 6));
+        assertTrue(love6.love6(4, 6));
     }
 
     @Test
     public void whenSumOfTheTwoValuesAddsUpTo6ThenReturnTrue(){
-        assertTrue(Love6.love6(1, 5));
+        assertTrue(love6.love6(1, 5));
         // lazy
-        assertTrue(Love6.love6(5, 1));
+        assertTrue(love6.love6(5, 1));
     }
 
     @Test
     public void whenTheDifferenceOfTheTwoValuesAddsUpTo6ThenReturnTrue(){
-        assertTrue(Love6.love6(1, 7));
+        assertTrue(love6.love6(1, 7));
         // lazy
-        assertTrue(Love6.love6(8, 2));
+        assertTrue(love6.love6(8, 2));
     }
 }

@@ -1,5 +1,6 @@
 package logic1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -17,29 +18,36 @@ import static org.junit.Assert.assertEquals;
  * withoutDoubles(3, 3, false) → 6
  */
 public class WithoutDoublesTest {
+    
+    private WithoutDoubles withoutDoubles;
+    
+    @Before
+    public void init(){
+        withoutDoubles = new WithoutDoubles();
+    }
 
     @Test
     public void whenTheDiceRolledIsMadeUpOf2And3AndNoDoublesIsFalseThenReturn5(){
-        assertEquals(5, WithoutDoubles.withoutDoubles(2, 3, false));
+        assertEquals(5, withoutDoubles.withoutDoubles(2, 3, false));
     }
 
     @Test
     public void whenTheDiceRolledIsMadeUpOf3And3AndNoDoublesIsFalseThenReturn6(){
-        assertEquals(6, WithoutDoubles.withoutDoubles(3, 3, false));
+        assertEquals(6, withoutDoubles.withoutDoubles(3, 3, false));
     }
 
     @Test
     public void whenTheDiceRolledIsMadeUpOf3And3AndNoDoubleIsTrueThenReturn7(){
-        assertEquals(7, WithoutDoubles.withoutDoubles(3, 3, true));
+        assertEquals(7, withoutDoubles.withoutDoubles(3, 3, true));
     }
 
     @Test
     public void whenTheDiceRolledIsMadeUpOf2And3AndNoDoublesIsTrueThenReturn5(){
-        assertEquals(5, WithoutDoubles.withoutDoubles(2, 3, true));
+        assertEquals(5, withoutDoubles.withoutDoubles(2, 3, true));
     }
 
     @Test
     public void whenTheDiceRolledIsMadeUpOf6And6AndNoDoubleIsTrueThenReturn7(){
-        assertEquals(7, WithoutDoubles.withoutDoubles(6, 6, true));
+        assertEquals(7, withoutDoubles.withoutDoubles(6, 6, true));
     }
 }

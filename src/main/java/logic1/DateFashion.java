@@ -4,7 +4,7 @@ package logic1;
  * Created by Artemas on 23/06/2017.
  */
 public class DateFashion {
-    public static int dateFashion(int you, int date) {
+    public int dateFashion(int you, int date) {
 
         if ( (you > 7 && date > 7) || (you > 7 && date > 2) || (you > 2 && date > 7) ) {
             return 2;

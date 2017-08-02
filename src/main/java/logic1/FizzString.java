@@ -4,7 +4,7 @@ package logic1;
  * Created by Artemas on 30/06/2017.
  */
 public class FizzString {
-    public static String fizzString(String str) {
+    public String fizzString(String str) {
 
         if (str.startsWith("f") && str.endsWith("b")){
             return "FizzBuzz";
