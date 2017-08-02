@@ -1,5 +1,6 @@
 package map1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -21,6 +22,13 @@ import static org.junit.Assert.assertTrue;
  * mapAB4({"a": "aa", "b": "bbb"}) → {"a": "aa", "b": "bbb", "c": "bbb"}
  */
 public class MapAB4Test {
+    
+    private MapAB4 mapAB4;
+    
+    @Before
+    public void init(){
+        mapAB4 = new MapAB4();
+    }
 
     private Map<String, String> actualMap = new HashMap<>();
     private Map<String, String> expectedMap = new HashMap<>();
@@ -28,7 +36,7 @@ public class MapAB4Test {
     @Test
     public void whenAnEmptyMapIsPassedThenReturnAnEmptyMap(){
 
-        assertTrue(MapAB4.mapAB4(actualMap).isEmpty());
+        assertTrue(mapAB4.mapAB4(actualMap).isEmpty());
 
     }
 
@@ -42,7 +50,7 @@ public class MapAB4Test {
         expectedMap.put("b", actualMap.get("b"));
         expectedMap.put("c", actualMap.get("a"));
 
-        assertEquals(expectedMap, MapAB4.mapAB4(actualMap));
+        assertEquals(expectedMap, mapAB4.mapAB4(actualMap));
 
     }
 
@@ -56,7 +64,7 @@ public class MapAB4Test {
         expectedMap.put("b", actualMap.get("b"));
         expectedMap.put("c", actualMap.get("b"));
 
-        assertEquals(expectedMap, MapAB4.mapAB4(actualMap));
+        assertEquals(expectedMap, mapAB4.mapAB4(actualMap));
 
     }
 
@@ -69,7 +77,7 @@ public class MapAB4Test {
         expectedMap.put("a", "");
         expectedMap.put("b", "");
 
-        assertEquals(expectedMap, MapAB4.mapAB4(actualMap));
+        assertEquals(expectedMap, mapAB4.mapAB4(actualMap));
 
     }
 
@@ -80,7 +88,7 @@ public class MapAB4Test {
 
         expectedMap.put("a", "aaa");
 
-        assertEquals(expectedMap, MapAB4.mapAB4(actualMap));
+        assertEquals(expectedMap, mapAB4.mapAB4(actualMap));
     }
 
 }

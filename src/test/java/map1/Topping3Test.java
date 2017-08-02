@@ -1,5 +1,6 @@
 package map1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -23,13 +24,20 @@ import static org.junit.Assert.assertTrue;
  */
 public class Topping3Test {
 
+    private Topping3 topping3;
+
     private Map<String, String > actualMap = new HashMap<>();
     private Map<String, String> expectedMap = new HashMap<>();
+
+    @Before
+    public void init(){
+        topping3 = new Topping3();
+    }
 
     @Test
     public void whenAnEmptyMapIsPassedThenReturnAnEmptyMap(){
 
-        assertTrue(Topping3.topping3(actualMap).isEmpty());
+        assertTrue(topping3.topping3(actualMap).isEmpty());
 
     }
 
@@ -41,7 +49,7 @@ public class Topping3Test {
         expectedMap.put("potato", "ketchup");
         expectedMap.put("fries", "ketchup");
 
-        assertEquals(expectedMap, Topping3.topping3(actualMap));
+        assertEquals(expectedMap, topping3.topping3(actualMap));
 
     }
 
@@ -52,7 +60,7 @@ public class Topping3Test {
         expectedMap.put("salad", "oil");
         expectedMap.put("spinach", "oil");
 
-        assertEquals(expectedMap, Topping3.topping3(actualMap));
+        assertEquals(expectedMap, topping3.topping3(actualMap));
 
     }
 

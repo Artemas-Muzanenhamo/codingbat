@@ -1,5 +1,6 @@
 package map1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -19,14 +20,20 @@ import static org.junit.Assert.assertTrue;
  */
 public class MapShareTest {
 
+    private MapShare mapShare;
 
     Map<String, String> actualMap = new HashMap<>();
     Map<String, String> expectedMap = new HashMap<>();
 
+    @Before
+    public void init(){
+        mapShare = new MapShare();
+    }
+
     @Test
     public void whenAnEmptyMapIsPassedThenReturnEmptyMap(){
 
-        assertTrue(MapShare.mapShare(actualMap).isEmpty());
+        assertTrue(mapShare.mapShare(actualMap).isEmpty());
 
     }
 
@@ -39,7 +46,7 @@ public class MapShareTest {
         expectedMap.put("a", "aaa");
         expectedMap.put("b", "aaa");
 
-        assertEquals(expectedMap, MapShare.mapShare(actualMap));
+        assertEquals(expectedMap, mapShare.mapShare(actualMap));
 
     }
 
@@ -53,7 +60,7 @@ public class MapShareTest {
         expectedMap.put("a", "aaa");
         expectedMap.put("b", "aaa");
 
-        assertEquals(expectedMap, MapShare.mapShare(actualMap));
+        assertEquals(expectedMap, mapShare.mapShare(actualMap));
     }
 
 }

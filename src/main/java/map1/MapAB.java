@@ -6,7 +6,7 @@ import java.util.Map;
  * Created by amuzanenhamo on 23/05/2017.
  */
 public class MapAB {
-    public static Map<String, String> mapAB(Map<String, String> map) {
+    public Map<String, String> mapAB(Map<String, String> map) {
 
         if (map.containsKey("a") && map.containsKey("b")){
 

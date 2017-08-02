@@ -6,7 +6,7 @@ import java.util.Map;
  * Created by amuzanenhamo on 22/05/2017.
  */
 public class MapBully {
-    public static Map mapBully(Map<String, String> map) {
+    public Map mapBully(Map<String, String> map) {
 
         if (!map.isEmpty()){
 

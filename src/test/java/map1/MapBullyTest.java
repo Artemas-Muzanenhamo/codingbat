@@ -1,5 +1,6 @@
 package map1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -20,14 +21,21 @@ import static org.junit.Assert.assertTrue;
  * mapBully({"a": "candy", "b": "carrot", "c": "meh"}) → {"a": "", "b": "candy", "c": "meh"}
  */
 public class MapBullyTest {
+    
+    private MapBully mapBully;
 
     private Map<String, String> map =  new HashMap<>();
     private Map<String, String> map1 =  new HashMap<>();
 
+    @Before
+    public void init(){
+        mapBully = new MapBully();
+    }
+    
     @Test
     public void whenAnEmptyMapIsPassedThenReturnEmptyMap(){
 
-        assertTrue(MapBully.mapBully(map).isEmpty());
+        assertTrue(mapBully.mapBully(map).isEmpty());
 
 
     }
@@ -37,7 +45,7 @@ public class MapBullyTest {
 
         map.put("a", "");
 
-        assertEquals(map, MapBully.mapBully(map));
+        assertEquals(map, mapBully.mapBully(map));
 
     }
 
@@ -49,7 +57,7 @@ public class MapBullyTest {
         map1.put("a", "");
         map1.put("b", "candy");
 
-        assertEquals(map1, MapBully.mapBully(map));
+        assertEquals(map1, mapBully.mapBully(map));
 
     }
 
@@ -64,7 +72,7 @@ public class MapBullyTest {
         map1.put("a", "");
         map1.put("b", "candy");
 
-        assertEquals(map1, MapBully.mapBully(map));
+        assertEquals(map1, mapBully.mapBully(map));
 
     }
 
@@ -79,7 +87,7 @@ public class MapBullyTest {
         map1.put("b", "candy");
         map1.put("c", "meh");
 
-        assertEquals(map1, MapBully.mapBully(map));
+        assertEquals(map1, mapBully.mapBully(map));
 
     }
 
@@ -89,7 +97,7 @@ public class MapBullyTest {
 
         map1.put("b", "carrot");
 
-        assertEquals(map1, MapBully.mapBully(map));
+        assertEquals(map1, mapBully.mapBully(map));
 
     }
 }

@@ -6,7 +6,7 @@ import java.util.Map;
  * Created by amuzanenhamo on 24/05/2017.
  */
 public class Topping3 {
-    public static Map<String, String> topping3(Map<String, String> map) {
+    public Map<String, String> topping3(Map<String, String> map) {
 
         if (map.containsKey("potato")){
 
