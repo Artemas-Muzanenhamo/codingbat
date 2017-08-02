@@ -37,6 +37,7 @@ public class Two2Test {
 
         actualNumbers.add(1);
         actualNumbers.add(2);
+        actualNumbers.add(6);
 
         expectedNumbers.add(4);
 
