@@ -26,6 +26,8 @@ public class BunnyEarsTest {
     @Test
     public void whenBunnyArePassedThenReturnTheNumberOfEars(){
         assertEquals(2, bunnyEars.bunnyEars(1));
+        assertEquals(100, bunnyEars.bunnyEars(50));
+        assertEquals(20, bunnyEars.bunnyEars(10));
     }
 
 }
