@@ -1,5 +1,6 @@
 package string2;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
@@ -14,20 +15,27 @@ import static junit.framework.TestCase.assertEquals;
  * doubleChar("Hi-There") → "HHii--TThheerree"
  */
 public class DoubleCharTest {
+    
+    private DoubleChar doubleChar;
+    
+    @Before
+    public void init(){
+        doubleChar = new DoubleChar();
+    }
 
     @Test
     public void whenASingleStringIsPassedThenReturnTheStringDuplicated(){
-        assertEquals("aa", DoubleChar.doubleChar("a"));
+        assertEquals("aa", doubleChar.doubleChar("a"));
     }
 
     @Test
     public void whenAWordIsPassedThenReturnWordCharactersDuplicated(){
-        assertEquals("aarrtteemmaass", DoubleChar.doubleChar("artemas"));
+        assertEquals("aarrtteemmaass", doubleChar.doubleChar("artemas"));
 
         //lazy
-        assertEquals("TThhee", DoubleChar.doubleChar("The"));
-        assertEquals("AAAAbbbb", DoubleChar.doubleChar("AAbb"));
-        assertEquals("HHii--TThheerree", DoubleChar.doubleChar("Hi-There"));
+        assertEquals("TThhee", doubleChar.doubleChar("The"));
+        assertEquals("AAAAbbbb", doubleChar.doubleChar("AAbb"));
+        assertEquals("HHii--TThheerree", doubleChar.doubleChar("Hi-There"));
     }
 
 }

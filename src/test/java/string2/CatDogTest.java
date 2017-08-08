@@ -1,5 +1,6 @@
 package string2;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
@@ -16,18 +17,25 @@ import static junit.framework.TestCase.assertTrue;
  * catDog("1cat1cadodog") → true
  */
 public class CatDogTest {
+    
+    private CatDog catDog;
+    
+    @Before
+    public void init(){
+        catDog = new CatDog();
+    }
 
     @Test
     public void whenCatDogAppearsInTheStringPassedThenReturnTrue(){
-        assertTrue(CatDog.catDog("catdog"));
+        assertTrue(catDog.catDog("catdog"));
 
         //lazy
-        assertTrue(CatDog.catDog("1cat1cadodog"));
+        assertTrue(catDog.catDog("1cat1cadodog"));
     }
 
     @Test
     public void whenCatDogDoesNotAppearInTheStringPassedThenReturnFalse(){
-        assertFalse(CatDog.catDog("catcat"));
+        assertFalse(catDog.catDog("catcat"));
     }
 
 }
