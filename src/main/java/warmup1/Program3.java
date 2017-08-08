@@ -2,7 +2,7 @@ package warmup1;
 
 public class Program3 {
 	
-	public static String delDel(String str){
+	public String delDel(String str){
 		
 		//adelbc
 		if(str.length() < 4){

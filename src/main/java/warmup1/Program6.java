@@ -2,7 +2,7 @@ package warmup1;
 
 public class Program6 {
 	
-	public static int intMax(int a, int b, int c){
+	public int intMax(int a, int b, int c){
 		
 		if (a > b && a > c){
 			return a; //if first int is the biggest

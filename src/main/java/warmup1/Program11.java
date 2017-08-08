@@ -2,7 +2,7 @@ package warmup1;
 
 public class Program11 {
 	
-	public static String everyNth(String str, int n){
+	public String everyNth(String str, int n){
 		
 		String result = "";
 		

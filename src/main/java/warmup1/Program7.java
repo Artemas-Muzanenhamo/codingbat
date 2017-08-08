@@ -2,7 +2,7 @@ package warmup1;
 
 public class Program7 {
 	
-	public static int close10(int a, int b){
+	public int close10(int a, int b){
 		
 		a = Math.abs(a);
 		b = Math.abs(b);

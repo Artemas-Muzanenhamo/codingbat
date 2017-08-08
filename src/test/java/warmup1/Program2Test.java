@@ -3,6 +3,7 @@ package warmup1;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class Program2Test {
@@ -15,22 +16,34 @@ public class Program2Test {
 //loneTeen(13, 13) → false
 
 	
+    private Program2 program2;
+    
+    @Before
+    public void init(){
+        program2 = new Program2();
+    }
+    
 	@Test
 	public void whenOneNumberHasTeenThenReturnTrue(){
 		
-		assertTrue(Program2.loneTeen(13, 99));
-		assertTrue(Program2.loneTeen(21, 19));
+		assertTrue(program2.loneTeen(13, 99));
+		assertTrue(program2.loneTeen(21, 19));
 		
 	}
 	
 	@Test
 	public void whenTwoNumbersHasTeenThenReturnFalse(){
-		assertFalse(Program2.loneTeen(13, 13));
+		assertFalse(program2.loneTeen(13, 13));
 	}
 	
 	@Test
 	public void whenTwoNumbersDoNotHaveTeenThenReturnFalse(){
-		assertFalse(Program2.loneTeen(99, 99));
+		assertFalse(program2.loneTeen(99, 99));
 	}
+
+	@Test
+    public void whenOneOfTheNumbersHasTeenThenReturnTrue(){
+	    assertTrue(program2.loneTeen(13, 99));
+    }
 	
 }

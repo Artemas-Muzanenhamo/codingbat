@@ -2,7 +2,7 @@ package warmup1;
 
 public class Program5 {
 	
-	public static String startOz(String str){
+	public String startOz(String str){
 		
 		String word = null;
 		

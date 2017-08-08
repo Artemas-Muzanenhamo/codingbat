@@ -2,7 +2,7 @@ package warmup1;
 
 public class Program10 {
 	
-	public static boolean stringE(String str){
+	public boolean stringE(String str){
 		
 		int count = 0;
 		

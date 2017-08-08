@@ -2,6 +2,7 @@ package warmup1;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -16,28 +17,35 @@ import org.junit.Test;
  */
 
 public class Program3Test {
+
+    private Program3 program3;
+    
+    @Before
+    public void init(){
+        program3 = new Program3();
+    }
 	
 	@Test(expected=NullPointerException.class)
 	public void whenNullParameterisPassedInThenReturnNull() throws Exception{
 		
-		Program3.delDel(null);
+		program3.delDel(null);
 		
 	}
 	
 	@Test
 	public void whenStringLengthIsLessThan3ThenReturnStringAsIs(){
 		
-		assertEquals("Hi", Program3.delDel("Hi"));
-		assertEquals("add", Program3.delDel("add"));
-		assertEquals("del", Program3.delDel("del"));
+		assertEquals("Hi", program3.delDel("Hi"));
+		assertEquals("add", program3.delDel("add"));
+		assertEquals("del", program3.delDel("del"));
 		
 	}
 	
 	@Test
 	public void whenStringDelAppearsAtIndex1ThenReturnAStringWhereThatDelIsDeleted(){
 		
-		String testWord1 = Program3.delDel("adelbc");
-		String testWord2 = Program3.delDel("adelHello");
+		String testWord1 = program3.delDel("adelbc");
+		String testWord2 = program3.delDel("adelHello");
 		
 		assertEquals("abc", testWord1);
 		assertEquals("aHello", testWord2);
@@ -46,12 +54,12 @@ public class Program3Test {
 	
 	@Test
 	public void whenStringContainsNoDelThenReturnWordAsIs(){
-		assertEquals("adedbc", Program3.delDel("adedbc"));
+		assertEquals("adedbc", program3.delDel("adedbc"));
 	}
 	
 	@Test
 	public void whenStringStartsDelAtAnyIndexThan1ThenRetunWordAsIs(){
-		assertEquals("abcdel", Program3.delDel("abcdel"));
+		assertEquals("abcdel", program3.delDel("abcdel"));
 	}
 
 }

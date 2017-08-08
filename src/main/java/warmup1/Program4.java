@@ -2,7 +2,7 @@ package warmup1;
 
 public class Program4 {
 	
-	public static boolean mixStart(String str){
+	public boolean mixStart(String str){
 		
 		if ((str.length() > 2) && (str.contains("ix"))){
 			return true;

@@ -2,7 +2,7 @@ package warmup1;
 
 public class Program2 {
 	
-	public static boolean loneTeen(int a, int b){
+	public boolean loneTeen(int a, int b){
 		
 		//if (a || b are teen) return true
 		//if (a && b are not teen) return false
