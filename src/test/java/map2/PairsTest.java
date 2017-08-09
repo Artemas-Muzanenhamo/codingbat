@@ -1,5 +1,6 @@
 package map2;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -19,13 +20,20 @@ import static org.junit.Assert.assertEquals;
  * pairs(["man", "moon", "good", "night"]) → {"g": "d", "m": "n", "n": "t"}
  */
 public class PairsTest {
+    
+    private Pairs pairs;
 
     private String[] actualArray = {};
     private Map<String, String> expectedOutcome = new HashMap<>();
+    
+    @Before
+    public void init(){
+        pairs = new Pairs();
+    }
 
     @Test
     public void whenAnEmptyArrayIsPassedThenReturnAnEmptyMap(){
-        assertEquals(expectedOutcome, Pairs.pairs(actualArray));
+        assertEquals(expectedOutcome, pairs.pairs(actualArray));
     }
 
     @Test
@@ -36,7 +44,7 @@ public class PairsTest {
 
         expectedOutcome.put("a", "a");
 
-        assertEquals(expectedOutcome, Pairs.pairs(actualArray));
+        assertEquals(expectedOutcome, pairs.pairs(actualArray));
     }
 
     @Test
@@ -52,7 +60,7 @@ public class PairsTest {
         expectedOutcome.put("m", "n");
         expectedOutcome.put("n", "t");
 
-        assertEquals(expectedOutcome, Pairs.pairs(actualArray));
+        assertEquals(expectedOutcome, pairs.pairs(actualArray));
 
     }
 

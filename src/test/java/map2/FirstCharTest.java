@@ -1,5 +1,6 @@
 package map2;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -21,12 +22,19 @@ import static org.junit.Assert.assertEquals;
  */
 public class FirstCharTest {
 
+    private FirstChar firstChar;
+
     private String[] actualArray = {};
     private Map<String, String> expectedOutcome = new HashMap<>();
 
+    @Before
+    public void init(){
+        firstChar = new FirstChar();
+    }
+
     @Test
     public void whenAnEmptyArrayIsPassedThenReturnAnEmptyMap(){
-        assertEquals(expectedOutcome, FirstChar.firstChar(actualArray));
+        assertEquals(expectedOutcome, firstChar.firstChar(actualArray));
     }
 
     @Test
@@ -37,7 +45,7 @@ public class FirstCharTest {
 
         expectedOutcome.put("s", "salt");
 
-        assertEquals(expectedOutcome, FirstChar.firstChar(actualArray));
+        assertEquals(expectedOutcome, firstChar.firstChar(actualArray));
     }
 
     @Test
@@ -49,7 +57,7 @@ public class FirstCharTest {
 
         expectedOutcome.put("s", "saltsoda");
 
-        assertEquals(expectedOutcome, FirstChar.firstChar(actualArray));
+        assertEquals(expectedOutcome, firstChar.firstChar(actualArray));
     }
 
 }

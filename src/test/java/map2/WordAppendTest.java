@@ -1,5 +1,6 @@
 package map2;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -20,12 +21,19 @@ import static org.junit.Assert.assertEquals;
  */
 public class WordAppendTest {
 
+    private WordAppend wordAppend;
+
     private String[] array = {};
     private String expected = "";
 
+    @Before
+    public void init(){
+        wordAppend = new WordAppend();
+    }
+
     @Test
     public void whenAnEmptyArrayIsPassedThenReturnAnEmptyString(){
-        assertEquals(expected, WordAppend.wordAppend(array));
+        assertEquals(expected, wordAppend.wordAppend(array));
     }
 
     @Test
@@ -34,7 +42,7 @@ public class WordAppendTest {
         array = new String[]{"a", "b", "a"};
         expected = "a";
 
-        assertEquals(expected, WordAppend.wordAppend(array));
+        assertEquals(expected, wordAppend.wordAppend(array));
 
     }
 
@@ -44,7 +52,7 @@ public class WordAppendTest {
         array = new String[]{"a", "b", "a", "b", "a"};
         expected = "ab";
 
-        assertEquals(expected, WordAppend.wordAppend(array));
+        assertEquals(expected, wordAppend.wordAppend(array));
 
     }
 }

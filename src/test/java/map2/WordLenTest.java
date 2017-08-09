@@ -1,5 +1,6 @@
 package map2;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -22,12 +23,19 @@ import static org.junit.Assert.assertEquals;
  */
 public class WordLenTest {
 
+    private WordLen wordLen;
+
     private String[] actualArray = {};
     private Map<String, Integer> expectedOutcome = new HashMap<>();
 
+    @Before
+    public void init(){
+        wordLen = new WordLen();
+    }
+
     @Test
     public void whenAnEmptyArrayIsPassedThenReturnAnEmptyMap(){
-        assertEquals(expectedOutcome, WordLen.wordLen(actualArray));
+        assertEquals(expectedOutcome, wordLen.wordLen(actualArray));
     }
 
     @Test
@@ -38,6 +46,6 @@ public class WordLenTest {
 
         expectedOutcome.put("a", 1);
 
-        assertEquals(expectedOutcome, WordLen.wordLen(actualArray));
+        assertEquals(expectedOutcome, wordLen.wordLen(actualArray));
     }
 }

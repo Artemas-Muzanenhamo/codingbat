@@ -1,5 +1,6 @@
 package map2;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -19,13 +20,20 @@ import static org.junit.Assert.assertEquals;
  * word0(["c", "b", "a"]) → {"a": 0, "b": 0, "c": 0}
  */
 public class Word0Test {
+    
+    private Word0 word0;
 
     private String[] actualArray = {};
     private Map<String, Integer> expectedOutcome = new HashMap<>();
+    
+    @Before
+    public void init(){
+        word0 = new Word0();
+    }
 
     @Test
     public void whenAnEmptyArrayIsPassedThenReturnAnEmptyMap(){
-        assertEquals(expectedOutcome, Word0.word0(actualArray));
+        assertEquals(expectedOutcome, word0.word0(actualArray));
     }
 
     @Test
@@ -36,7 +44,7 @@ public class Word0Test {
 
         expectedOutcome.put("a", 0);
 
-        assertEquals(expectedOutcome, Word0.word0(actualArray));
+        assertEquals(expectedOutcome, word0.word0(actualArray));
     }
 
     @Test
@@ -53,7 +61,7 @@ public class Word0Test {
         expectedOutcome.put("b", 0);
         expectedOutcome.put("c", 0);
 
-        assertEquals(expectedOutcome, Word0.word0(actualArray));
+        assertEquals(expectedOutcome, word0.word0(actualArray));
 
     }
 

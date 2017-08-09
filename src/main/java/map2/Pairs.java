@@ -7,7 +7,7 @@ import java.util.Map;
  * Created by amuzanenhamo on 30/05/2017.
  */
 public class Pairs {
-    public static Map<String, String> pairs(String[] strings) {
+    public Map<String, String> pairs(String[] strings) {
 
         Map<String, String> map = new HashMap<>();
 

@@ -7,7 +7,7 @@ import java.util.Map;
  * Created by amuzanenhamo on 31/05/2017.
  */
 public class FirstChar {
-    public static Map<String,String> firstChar(String[] strings) {
+    public Map<String,String> firstChar(String[] strings) {
 
         Map<String, String> map = new HashMap<>();
 
