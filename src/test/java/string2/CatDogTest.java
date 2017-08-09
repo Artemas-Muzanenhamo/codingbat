@@ -26,6 +26,11 @@ public class CatDogTest {
     }
 
     @Test
+    public void whenAnEmptyStringIsPassedThenReturnFalse(){
+        assertFalse(catDog.catDog(""));
+    }
+
+    @Test
     public void whenCatDogAppearsInTheStringPassedThenReturnTrue(){
         assertTrue(catDog.catDog("catdog"));
 

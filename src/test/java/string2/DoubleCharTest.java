@@ -24,6 +24,11 @@ public class DoubleCharTest {
     }
 
     @Test
+    public void whenAnEmptyStringIsPassedThenReturnTheEmptyStringAsIs(){
+        assertEquals("", doubleChar.doubleChar(""));
+    }
+
+    @Test
     public void whenASingleStringIsPassedThenReturnTheStringDuplicated(){
         assertEquals("aa", doubleChar.doubleChar("a"));
     }

@@ -23,6 +23,11 @@ public class CountHiTest {
     }
 
     @Test
+    public void whenAnEmptyStringIsPassedThenReturnZero(){
+        assertEquals(0, countHi.countHi(""));
+    }
+
+    @Test
     public void whenAStringContains_HI_ThenReturnCount1(){
         assertEquals(1, countHi.countHi("hi"));
     }
