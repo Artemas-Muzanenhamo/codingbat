@@ -5,7 +5,7 @@ package warmup2;
  */
 public class StringX {
 
-    public static String stringX(String str){
+    public String stringX(String str){
 
         String finalWord = null;
         String x = "x";

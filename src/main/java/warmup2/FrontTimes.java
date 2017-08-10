@@ -5,7 +5,7 @@ package warmup2;
  */
 public class FrontTimes {
 
-    public static String frontTimes(String str, int n){
+    public String frontTimes(String str, int n){
 
         String tmp = "";
 

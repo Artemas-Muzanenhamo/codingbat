@@ -1,5 +1,6 @@
 package warmup2;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertFalse;
@@ -16,41 +17,48 @@ import static junit.framework.TestCase.assertTrue;
  * has271([2, 7, 1]) → true
  */
 public class Has271Test {
+    
+    private Has271 has271;
+    
+    @Before
+    public void init(){
+        has271 = new Has271();
+    }
 
     @Test
     public void whenEmptyArrayIsPassedThenReturnFalse(){
         int[] arr = {};
-        assertFalse(Has271.has271(arr));
+        assertFalse(has271.has271(arr));
     }
 
     @Test
     public void whenArrayLengthIsLessThan3ThenReturnFalse(){
         int[] arr = {1, 2};
-        assertFalse(Has271.has271(arr));
+        assertFalse(has271.has271(arr));
     }
 
     @Test
     public void whenArrayDoesNotHave271ThenReturnFalse(){
         int[] arr = {1, 2, 3, 4, 5};
-        assertFalse(Has271.has271(arr));
+        assertFalse(has271.has271(arr));
     }
 
     @Test
     public void whenArrayDoesNotHave271AndLengthIs3ThenReturnFalse(){
         int[] arr = {1, 2, 3};
-        assertFalse(Has271.has271(arr));
+        assertFalse(has271.has271(arr));
     }
 
     @Test
     public void whenArrayHas271AndLengthIs3ThenReturnTrue(){
         int[] arr = {2, 7, 1};
-        assertTrue(Has271.has271(arr));
+        assertTrue(has271.has271(arr));
     }
 
     @Test
     public void whenArrayHas271ThenReturnTrue(){
         int[] arr = {1, 2, 3, 2, 7, 1};
-        assertTrue(Has271.has271(arr));
+        assertTrue(has271.has271(arr));
     }
 
 }

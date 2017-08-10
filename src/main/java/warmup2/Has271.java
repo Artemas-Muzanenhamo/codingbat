@@ -4,7 +4,7 @@ package warmup2;
  * Created by amuzanenhamo on 22/04/2017.
  */
 public class Has271 {
-    public static boolean has271(int[] nums) {
+    public boolean has271(int[] nums) {
 
         // Iterate < length-2, so can use i+1 and i+2 in the loop.
         // Return true immediately when seeing 271.

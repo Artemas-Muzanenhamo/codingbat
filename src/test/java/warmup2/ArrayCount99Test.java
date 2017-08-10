@@ -1,5 +1,6 @@
 package warmup2;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -13,14 +14,21 @@ import static org.junit.Assert.assertEquals;
  * arrayCount9([1, 9, 9]) → 2
  * arrayCount9([1, 9, 9, 3, 9]) → 3
  */
-public class ArrayCount9Test {
+public class ArrayCount99Test {
+
+    private ArrayCount9 arrayCount9;
+
+    @Before
+    public void init(){
+        arrayCount9 = new ArrayCount9();
+    }
 
     @Test
     public void whenEmptyArrayIsPassedThenReturnZero(){
 
         int[] nums = {0, 0, 0};
 
-        assertEquals(0, ArrayCount.arrayCount(nums));
+        assertEquals(0, arrayCount9.arrayCount9(nums));
     }
 
     @Test
@@ -28,7 +36,7 @@ public class ArrayCount9Test {
 
         int[] nums = {1, 2, 9};
 
-        assertEquals(1, ArrayCount.arrayCount(nums));
+        assertEquals(1, arrayCount9.arrayCount9(nums));
     }
 
     @Test
@@ -36,7 +44,7 @@ public class ArrayCount9Test {
 
         int[] nums = {1, 9, 9};
 
-        assertEquals(2, ArrayCount.arrayCount(nums));
+        assertEquals(2, arrayCount9.arrayCount9(nums));
 
     }
 
@@ -45,7 +53,7 @@ public class ArrayCount9Test {
 
         int[] nums = {1, 9, 9, 3, 9};
 
-        assertEquals(3, ArrayCount.arrayCount(nums));
+        assertEquals(3, arrayCount9.arrayCount9(nums));
     }
 
     @Test
@@ -53,7 +61,7 @@ public class ArrayCount9Test {
 
         int[] nums = {1, 2, 3, 4, 5, 6, 7, 8};
 
-        assertEquals(0, ArrayCount.arrayCount(nums));
+        assertEquals(0, arrayCount9.arrayCount9(nums));
     }
 
 }

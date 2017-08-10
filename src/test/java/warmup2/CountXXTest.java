@@ -1,5 +1,6 @@
 package warmup2;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -15,45 +16,52 @@ import static org.junit.Assert.assertEquals;
  *
  */
 public class CountXXTest {
+    
+    private CountXX countXX;
+    
+    @Before
+    public void init(){
+        countXX = new CountXX();
+    }
 
     @Test
     public void whenEmptyStringIsPassedThenReturnZero(){
 
-        assertEquals(0, CountXX.countXX(""));
+        assertEquals(0, countXX.countXX(""));
 
     }
 
     @Test
     public void whenGenericStringIsPassedThenReturnZero(){
 
-        assertEquals(0, CountXX.countXX("Hello"));
+        assertEquals(0, countXX.countXX("Hello"));
 
     }
 
     @Test
     public void whenStringXXIsPassedThenReturnOneOccurancesAsResult(){
 
-        assertEquals(1, CountXX.countXX("abcxx"));
+        assertEquals(1, countXX.countXX("abcxx"));
 
     }
 
 //    @Test
 //    public void whenStringWithXXIsPassedThenReturnATrimmedStringWithASingleX(){
-//        assertEquals("abcx", CountXX.removeCharAt("abcxx", "abcxx".indexOf("xx")));
+//        assertEquals("abcx", countXX.removeCharAt("abcxx", "abcxx".indexOf("xx")));
 //    }
 
     @Test
     public void whenStringXXXIsPassedThenReturnTwoOccurancesAsResult(){
 
-        assertEquals(2, CountXX.countXX("xxx"));
+        assertEquals(2, countXX.countXX("xxx"));
 
     }
 
     @Test
     public void whenStringXXXXIsPassedThenReturnThreeOccurancesAsResult(){
 
-        System.out.println(CountXX.countXX("xxxx"));
-        assertEquals(3, CountXX.countXX("xxxx"));
+        System.out.println(countXX.countXX("xxxx"));
+        assertEquals(3, countXX.countXX("xxxx"));
 
     }
 }

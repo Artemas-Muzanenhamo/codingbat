@@ -1,5 +1,6 @@
 package warmup2;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -14,30 +15,37 @@ import static org.junit.Assert.assertEquals;
  * stringBits("Heeololeo") → "Hello"
  */
 public class StringBitsTest {
+    
+    private StringBits stringBits;
+    
+    @Before
+    public void init(){
+        stringBits = new StringBits();
+    }
 
     @Test
     public void whenEmptyStringIsPassedThenReturnEmptyString(){
-        assertEquals("", StringBits.stringBits(""));
+        assertEquals("", stringBits.stringBits(""));
     }
 
     @Test
     public void whenStringIsNullThenReturnEmptyString(){
-        assertEquals("", StringBits.stringBits(null));
+        assertEquals("", stringBits.stringBits(null));
     }
 
     @Test
     public void whenA2CharStringIsPassedThenReturnTheFirstCharacter(){
-        assertEquals("H", StringBits.stringBits("Hi"));
+        assertEquals("H", stringBits.stringBits("Hi"));
     }
 
     @Test
     public void whenAHeeololeoStringIsPassedThenReturnTheEvenCharacters(){
-        assertEquals("Hello", StringBits.stringBits("Heeololeo"));
+        assertEquals("Hello", stringBits.stringBits("Heeololeo"));
     }
 
     @Test
     public void whenHelloStringIsPassedThenReturn(){
-        assertEquals("Hlo", StringBits.stringBits("Hello"));
+        assertEquals("Hlo", stringBits.stringBits("Hello"));
     }
 
 }

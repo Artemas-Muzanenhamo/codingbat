@@ -1,5 +1,6 @@
 package warmup2;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertFalse;
@@ -17,35 +18,42 @@ import static junit.framework.TestCase.assertTrue;
  * doubleX("xxxxx") → true
  */
 public class DoubleXTest {
+    
+    private DoubleX doubleX;
+    
+    @Before
+    public void init(){
+        doubleX = new DoubleX();
+    }
 
     @Test
     public void whenAnEmptyStringIsPassedThenReturnEmptyValue(){
-        assertFalse(DoubleX.doubleX(""));
+        assertFalse(doubleX.doubleX(""));
     }
 
     @Test
     public void whenAnNonEmptyStringIsPassedReturnTrue(){
-        assertTrue(DoubleX.doubleX("Helloxx"));
+        assertTrue(doubleX.doubleX("Helloxx"));
     }
 
     @Test
     public void whenStringDoesNotContainXXThenReturnFalse(){
-        assertFalse(DoubleX.doubleX("Hello"));
+        assertFalse(doubleX.doubleX("Hello"));
     }
 
     @Test
     public void whenFirstInstanceOfStringDoesNotContainXXThenReturnFalse(){
-        assertFalse(DoubleX.doubleX("axaxax"));
+        assertFalse(doubleX.doubleX("axaxax"));
     }
 
     @Test
     public void whenFirstInstanceOfStringContainsXXThenReturnTrue(){
-        assertTrue(DoubleX.doubleX("axxbb"));
+        assertTrue(doubleX.doubleX("axxbb"));
     }
 
     @Test
     public void whenLastInstanceOfStringContainsXXThenReturnFalse(){
-        assertFalse(DoubleX.doubleX("axbbxx"));
+        assertFalse(doubleX.doubleX("axbbxx"));
     }
 
 }

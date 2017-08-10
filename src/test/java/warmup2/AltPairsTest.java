@@ -1,5 +1,6 @@
 package warmup2;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -13,48 +14,55 @@ import static org.junit.Assert.assertEquals;
  * altPairs("CodingHorror") → "Congrr"
  */
 public class AltPairsTest {
+    
+    private AltPairs altPairs;
+    
+    @Before
+    public void init(){
+        altPairs = new AltPairs();
+    }
 
     @Test
     public void whenStringIsEmptyThenReturnEmptyString(){
 
-        assertEquals("", AltPairs.altPairs(""));
+        assertEquals("", altPairs.altPairs(""));
 
     }
 
     @Test
     public void whenStringWithASingleCharacterIsPassedThenReturnTheStringAsIs(){
 
-        assertEquals("A", AltPairs.altPairs("A"));
+        assertEquals("A", altPairs.altPairs("A"));
 
     }
 
     @Test
     public void whenStringPassedHas2CharactersThenReturnStringAsIs(){
 
-        assertEquals("Ar", AltPairs.altPairs("Ar"));
+        assertEquals("Ar", altPairs.altPairs("Ar"));
 
     }
 
     @Test
     public void whenStringPassedHas3CharactersThenReturnFirstTwoStringsAsIs(){
 
-        assertEquals("Ar", AltPairs.altPairs("Art"));
+        assertEquals("Ar", altPairs.altPairs("Art"));
 
     }
 
     @Test
     public void whenStringPassedHas6CharactersThenReturn0145(){
 
-        assertEquals("Arma", AltPairs.altPairs("Artemas"));
+        assertEquals("Arma", altPairs.altPairs("Artemas"));
 
     }
 
     @Test
     public void whenStringPassedHas12CharactersThenReturnIndex014589Values(){
 
-        assertEquals("Congrr", AltPairs.altPairs("CodingHorror"));
-        assertEquals("Chole", AltPairs.altPairs("Chocolate"));
-        assertEquals("ThThThth", AltPairs.altPairs("ThisThatTheOther"));
+        assertEquals("Congrr", altPairs.altPairs("CodingHorror"));
+        assertEquals("Chole", altPairs.altPairs("Chocolate"));
+        assertEquals("ThThThth", altPairs.altPairs("ThisThatTheOther"));
 
     }
 }

@@ -5,7 +5,7 @@ package warmup2;
  */
 public class ArrayFront9 {
 
-    public static boolean arrayFront9(int[] nums){
+    public boolean arrayFront9(int[] nums){
 
         boolean contains9 = false;
 
@@ -25,8 +25,6 @@ public class ArrayFront9 {
                     }
                 }
             }
-        }else{
-            contains9 = false;
         }
 
         return contains9;

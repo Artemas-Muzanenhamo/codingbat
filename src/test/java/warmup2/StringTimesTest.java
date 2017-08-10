@@ -1,6 +1,7 @@
 package warmup2;
 
 import org.junit.Assert.*;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -17,34 +18,41 @@ import static org.junit.Assert.assertEquals;
 
 public class StringTimesTest {
 
+    private StringTimes stringTimes;
+
+    @Before
+    public void init(){
+        stringTimes = new StringTimes();
+    }
+
     @Test
     public void whenEmptyStringIsPassedThenReturnEmptyString(){
-        assertEquals("", StringTimes.stringTimes("", 1));
+        assertEquals("", stringTimes.stringTimes("", 1));
     }
 
     @Test
     public void whenNonNegative0IsPassedThenReturnEmptyString(){
-        assertEquals("", StringTimes.stringTimes("Hi", 0));
+        assertEquals("", stringTimes.stringTimes("Hi", 0));
     }
 
     @Test
     public void whenNonNegative1IsPassedThenReturnSameStringCopy(){
-        assertEquals("Hi", StringTimes.stringTimes("Hi", 1));
+        assertEquals("Hi", stringTimes.stringTimes("Hi", 1));
     }
 
     @Test
     public void whenNonNegative2IsPassedThenReturn2StringCopies(){
-        assertEquals("HiHi", StringTimes.stringTimes("Hi", 2));
+        assertEquals("HiHi", stringTimes.stringTimes("Hi", 2));
     }
 
     @Test
     public void whenNonNegative3IsPassedThenReturn3StringCopies(){
-        assertEquals("HiHiHi", StringTimes.stringTimes("Hi", 3));
+        assertEquals("HiHiHi", stringTimes.stringTimes("Hi", 3));
     }
 
     @Test
     public void whenNonNegative5IsPassedThenReturn5StringCopies(){
-        assertEquals("123123123123123", StringTimes.stringTimes("123", 5));
+        assertEquals("123123123123123", stringTimes.stringTimes("123", 5));
     }
 
 }

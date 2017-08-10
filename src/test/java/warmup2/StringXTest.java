@@ -1,5 +1,6 @@
 package warmup2;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -14,46 +15,53 @@ import static org.junit.Assert.assertEquals;
  * stringX("xabxxxcdx") → "xabcdx"
  */
 public class StringXTest {
+    
+    private StringX stringX;
+    
+    @Before
+    public void init(){
+        stringX = new StringX();
+    }
 
     @Test
     public void whenEmptyStringIsPassedThenReturnEmptyString(){
 
-        assertEquals("", StringX.stringX(""));
+        assertEquals("", stringX.stringX(""));
 
     }
 
     @Test
     public void whenStringPassedDoesNotContainXThenReturnStringAsIs(){
 
-        assertEquals("Artemas", StringX.stringX("Artemas"));
+        assertEquals("Artemas", stringX.stringX("Artemas"));
 
     }
 
     @Test
     public void whenStringPassedContainsXAtTheBeginningIndexThenTrimAllTheXAndReturnNewString(){
 
-        assertEquals("xabcd", StringX.stringX("xabxcd"));
+        assertEquals("xabcd", stringX.stringX("xabxcd"));
 
     }
 
     @Test
     public void whenStringPassedDoesNotContainXAtTheBeginningIndexThenTrimAllTheXAndReturnNewString(){
 
-        assertEquals("abcd", StringX.stringX("abxcd"));
+        assertEquals("abcd", stringX.stringX("abxcd"));
 
     }
 
     @Test
     public void whenStringPassedContainsXAtTheEndIndexThenTrimAllTheXAndReturnNewString(){
 
-        assertEquals("xabcdx", StringX.stringX("xabxxcdx"));
+        assertEquals("xabcdx", stringX.stringX("xabxxcdx"));
 
     }
 
     @Test
     public void whenASingleStringXIsPassedInThenReturnSingleStringBack(){
 
-        assertEquals("x", StringX.stringX("x"));
+        assertEquals("x", stringX.stringX("x"));
 
     }
 

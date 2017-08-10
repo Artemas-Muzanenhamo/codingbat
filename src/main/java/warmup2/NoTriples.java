@@ -4,7 +4,7 @@ package warmup2;
  * Created by amuzanenhamo on 20/04/2017.
  */
 public class NoTriples {
-    public static boolean noTriples(int[] arr) {
+    public boolean noTriples(int[] arr) {
 
         boolean containsTriple = true;
 
