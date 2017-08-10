@@ -9,7 +9,7 @@ public class ArrayFront9 {
 
         boolean contains9 = false;
 
-        if (nums != null){
+        if (nums.length != 0){
 
             //if arr is less than 4 elements
             if (nums.length < 4){

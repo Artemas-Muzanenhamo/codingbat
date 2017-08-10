@@ -9,7 +9,7 @@ public class FrontTimes {
 
         String tmp = "";
 
-        if ((!str.isEmpty() && str.length() > 0) && n > 0){
+        if (!str.isEmpty() && n > 0){
 
             if (str.length() > 3){
 
