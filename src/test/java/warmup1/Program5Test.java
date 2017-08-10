@@ -5,7 +5,8 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-//Given a string, return a string made of the first 2 chars (if present), however include first char only if it is 'o' 
+//Given a string, return a string made of the first 2 chars (if present),
+// however include first char only if it is 'o'
 //and include the second only if it is 'z', so "ozymandias" yields "oz".
 //
 //startOz("ozymandias") → "oz"
@@ -36,7 +37,7 @@ public class Program5Test {
 	}
 	
 	@Test
-	public void whenSecondCharIsZthenReturnZ(){
+	public void whenSecondCharIsZThenReturnZ(){
 		
 		assertEquals("z", program5.startOz("bzoo"));
 		

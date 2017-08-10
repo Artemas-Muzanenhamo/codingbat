@@ -39,4 +39,14 @@ public class Program6Test {
 		assertEquals(3, program6.intMax(1, 2, 3));
 	}
 
+	@Test
+    public void whenTheMiddleNumberIsTheLargestNumberThenReturnTheMiddleElementValue(){
+	    assertEquals(3, program6.intMax(1, 3, 2));
+    }
+
+	@Test
+    public void whenAllIntValuesAreTheSameThenReturn0(){
+	    assertEquals(0, program6.intMax(3, 3, 3));
+    }
+
 }

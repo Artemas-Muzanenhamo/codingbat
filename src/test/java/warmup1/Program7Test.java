@@ -1,6 +1,7 @@
 package warmup1;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
@@ -31,6 +32,7 @@ public class Program7Test {
 	public void whenNumberIsNearestToTenThenReturnTheNumber(){
 		assertEquals(8, program7.close10(13, 8));
 		assertEquals(8, program7.close10(8, 13));
+		assertEquals(13, program7.close10(13, 14));
 	}
 	
 	@Test
