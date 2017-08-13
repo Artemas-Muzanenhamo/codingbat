@@ -3,6 +3,7 @@ package logic1;
 import org.junit.Before;
 import org.junit.Test;
 
+import static junit.framework.TestCase.assertFalse;
 import static junit.framework.TestCase.assertTrue;
 
 /**
@@ -48,5 +49,10 @@ public class NearTenTest {
     @Test
     public void whenTheNumberPassedInIsAMultipleOf10ThenReturnTrue(){
         assertTrue(nearTen.nearTen(20));
+    }
+
+    @Test
+    public void whenTheNumberPassedInIs3MoreThanATheMultipleOf10ThenReturnFalse(){
+        assertFalse(nearTen.nearTen(13));
     }
 }
