@@ -5,7 +5,7 @@ package warmup2;
  */
 public class DoubleX {
 
-    public static boolean doubleX(String str){
+    public boolean doubleX(String str){
 
         if (str.isEmpty()){
             return false;
@@ -20,8 +20,6 @@ public class DoubleX {
                     return false;
                 }
             }
-
-            return true;
         }
 
         return false;

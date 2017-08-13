@@ -3,6 +3,7 @@ package warmup1;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class Program1Test {
@@ -14,19 +15,26 @@ public class Program1Test {
 //hasTeen(20, 19, 10) → true
 //hasTeen(20, 10, 13) → true
 
+    private Program1 program1;
+
+    @Before
+    public void init(){
+        program1 = new Program1();
+    }
+
 	@Test
 	public void whenNumberContainTeenThenReturnTrue(){
 		
-		assertTrue(Program1.hasTeen(13, 20, 10));
-		assertTrue(Program1.hasTeen(20, 19, 10));
-		assertTrue(Program1.hasTeen(20, 10, 13));
+		assertTrue(program1.hasTeen(13, 20, 10));
+		assertTrue(program1.hasTeen(20, 19, 10));
+		assertTrue(program1.hasTeen(20, 10, 13));
 		
 	}
 	
 	@Test
 	public void whenNumberDoesNotContainTeenThenReturnFalse(){
 		
-		assertFalse(Program1.hasTeen(9, 9, 9));
+		assertFalse(program1.hasTeen(9, 9, 9));
 		
 	}
 	

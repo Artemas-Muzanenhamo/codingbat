@@ -4,7 +4,7 @@ package string2;
  * Created by artemasm on 26/07/2017.
  */
 public class CountHi {
-    public static int countHi(String str) {
+    public int countHi(String str) {
 
         int count = 0;
 

@@ -7,7 +7,7 @@ import java.util.Map;
  * Created by Artemas on 16/06/2017.
  */
 public class WordAppend {
-    public static String wordAppend(String[] strings) {
+    public String wordAppend(String[] strings) {
         Map<String, Integer> map = new HashMap<String, Integer>();
         String result = "";
 

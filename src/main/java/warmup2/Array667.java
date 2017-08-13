@@ -5,7 +5,7 @@ package warmup2;
  */
 public class Array667 {
 
-    public static int array667(int[] arr) {
+    public int array667(int[] arr) {
 
         // counter
         int count = 0;

@@ -1,5 +1,6 @@
 package map2;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -21,12 +22,19 @@ import static org.junit.Assert.assertEquals;
  */
 public class WordCountTest {
 
+    private WordCount wordCount;
+
     private String[] actualArray = {};
     private Map<String, Integer> expectedOutcome = new HashMap<>();
 
+    @Before
+    public void init(){
+        wordCount = new WordCount();
+    }
+
     @Test
     public void whenAnEmptyArrayIsPassedThenReturnAnEmptyMap(){
-        assertEquals(expectedOutcome, WordCount.wordCount(actualArray));
+        assertEquals(expectedOutcome, wordCount.wordCount(actualArray));
     }
 
     @Test
@@ -37,7 +45,7 @@ public class WordCountTest {
 
         expectedOutcome.put("a", 1);
 
-        assertEquals(expectedOutcome, WordCount.wordCount(actualArray));
+        assertEquals(expectedOutcome, wordCount.wordCount(actualArray));
     }
 
     @Test
@@ -51,7 +59,7 @@ public class WordCountTest {
 
         expectedOutcome.put("c", 4);
 
-        assertEquals(expectedOutcome, WordCount.wordCount(actualArray));
+        assertEquals(expectedOutcome, wordCount.wordCount(actualArray));
     }
 
 }

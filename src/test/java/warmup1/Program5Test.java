@@ -2,9 +2,11 @@ package warmup1;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.Before;
 import org.junit.Test;
 
-//Given a string, return a string made of the first 2 chars (if present), however include first char only if it is 'o' 
+//Given a string, return a string made of the first 2 chars (if present),
+// however include first char only if it is 'o'
 //and include the second only if it is 'z', so "ozymandias" yields "oz".
 //
 //startOz("ozymandias") → "oz"
@@ -12,59 +14,66 @@ import org.junit.Test;
 //startOz("oxx") → "o"
 
 public class Program5Test {
+    
+    private Program5 program5;
+    
+    @Before
+    public void init(){
+        program5 = new Program5();
+    }
 	
 	@Test
 	public void whenStringLengthIsLessThan2CharsThenReturnStringAsIs(){
 		
-		assertEquals("o", Program5.startOz("on"));
+		assertEquals("o", program5.startOz("on"));
 		
 	}
 	
 	@Test
 	public void whenFirstCharIsOThenReturnO(){
 		
-		assertEquals("o", Program5.startOz("oxx"));
+		assertEquals("o", program5.startOz("oxx"));
 		
 	}
 	
 	@Test
-	public void whenSecondCharIsZthenReturnZ(){
+	public void whenSecondCharIsZThenReturnZ(){
 		
-		assertEquals("z", Program5.startOz("bzoo"));
+		assertEquals("z", program5.startOz("bzoo"));
 		
 	}
 	
 	@Test
 	public void whenFirstCharIsOAndSecondCharIsZThenReturnOZ(){
 		
-		assertEquals("oz", Program5.startOz("ozymandias"));
+		assertEquals("oz", program5.startOz("ozymandias"));
 		
 	}
 	
 	@Test
 	public void whenStringDoesntMatchFirstAndSecondCharThenReturnedEmptyString(){
-		assertEquals("", Program5.startOz("abc"));
-		assertEquals("", Program5.startOz("zoo"));
+		assertEquals("", program5.startOz("abc"));
+		assertEquals("", program5.startOz("zoo"));
 	}
 	
 	@Test
 	public void whenSingleStringOIsPassedThenReturnO(){
-		assertEquals("o", Program5.startOz("o"));
+		assertEquals("o", program5.startOz("o"));
 	}
 	
 	@Test
 	public void whenStringContainsZThenReturnEmptyString(){
-		assertEquals("", Program5.startOz("z"));
+		assertEquals("", program5.startOz("z"));
 	}
 	
 	@Test
 	public void whenEmptyStringIsPassedThenReturnEmptyString(){
-		assertEquals("", Program5.startOz(""));
+		assertEquals("", program5.startOz(""));
 	}
 	
 	@Test
 	public void whenStringContainsZZZZThenReturnZ(){
-		assertEquals("z", Program5.startOz("zzzz"));
+		assertEquals("z", program5.startOz("zzzz"));
 	}
 
 }

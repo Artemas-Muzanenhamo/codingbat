@@ -7,7 +7,7 @@ import java.util.Map;
  * Created by amuzanenhamo on 30/05/2017.
  */
 public class WordCount {
-    public static Map<String, Integer> wordCount(String[] strings) {
+    public Map<String, Integer> wordCount(String[] strings) {
 
         Map<String, Integer> map = new HashMap<>();
 

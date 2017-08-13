@@ -5,7 +5,7 @@ package warmup2;
  */
 public class StringMatch {
 
-    public static int stringMatch(String a, String b){
+    public int stringMatch(String a, String b){
 
         int count = 0;
         int len = Math.min(a.length(), b.length());

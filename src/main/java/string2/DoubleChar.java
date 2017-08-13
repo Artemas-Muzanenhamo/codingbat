@@ -4,7 +4,7 @@ package string2;
  * Created by artemasm on 26/07/2017.
  */
 public class DoubleChar {
-    public static String doubleChar(String str) {
+    public String doubleChar(String str) {
 
         String doubleChar = "";
 

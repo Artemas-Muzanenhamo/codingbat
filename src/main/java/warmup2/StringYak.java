@@ -5,7 +5,7 @@ package warmup2;
  */
 public class StringYak {
 
-    public static String stringYakPak(String str) {
+    public String stringYakPak(String str) {
 
         String result = "";
 

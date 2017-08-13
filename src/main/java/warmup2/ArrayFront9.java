@@ -5,11 +5,11 @@ package warmup2;
  */
 public class ArrayFront9 {
 
-    public static boolean arrayFront9(int[] nums){
+    public boolean arrayFront9(int[] nums){
 
         boolean contains9 = false;
 
-        if (nums != null){
+        if (nums.length != 0){
 
             //if arr is less than 4 elements
             if (nums.length < 4){
@@ -25,8 +25,6 @@ public class ArrayFront9 {
                     }
                 }
             }
-        }else{
-            contains9 = false;
         }
 
         return contains9;

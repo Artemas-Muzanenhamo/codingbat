@@ -5,11 +5,11 @@ package warmup2;
  */
 public class FrontTimes {
 
-    public static String frontTimes(String str, int n){
+    public String frontTimes(String str, int n){
 
         String tmp = "";
 
-        if ((!str.isEmpty() && str.length() > 0) && n > 0){
+        if (!str.isEmpty() && n > 0){
 
             if (str.length() > 3){
 

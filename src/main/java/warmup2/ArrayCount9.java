@@ -3,9 +3,9 @@ package warmup2;
 /**
  * Created by amuzanenhamo on 28/03/2017.
  */
-public class ArrayCount {
+public class ArrayCount9 {
 
-    public static int arrayCount(int[] nums){
+    public int arrayCount9(int[] nums){
 
         int count = 0;
 

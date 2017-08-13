@@ -5,7 +5,7 @@ package warmup2;
  */
 public class StringBits {
 
-    public static String stringBits(String str){
+    public String stringBits(String str){
 
         int stringLength;
         String[] strArr;

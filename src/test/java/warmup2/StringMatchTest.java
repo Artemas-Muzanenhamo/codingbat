@@ -1,5 +1,6 @@
 package warmup2;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -15,33 +16,40 @@ import static org.junit.Assert.assertEquals;
  * stringMatch("abc", "axc") → 0
  */
 public class StringMatchTest {
+    
+    private StringMatch stringMatch;
+    
+    @Before
+    public void init(){
+        stringMatch = new StringMatch();
+    }
 
     @Test
     public void whenEmptyStringArePassedThenReturnZero(){
-        assertEquals(0, StringMatch.stringMatch("", ""));
+        assertEquals(0, stringMatch.stringMatch("", ""));
     }
 
     @Test
     public void whenLeftStringIsEmptyThenReturnZero(){
-        assertEquals(0, StringMatch.stringMatch("", "xxbaaz"));
+        assertEquals(0, stringMatch.stringMatch("", "xxbaaz"));
     }
 
     @Test
     public void whenRightStringIsEmptyThenReturnZero(){
-        assertEquals(0, StringMatch.stringMatch("xxbaaz", ""));
+        assertEquals(0, stringMatch.stringMatch("xxbaaz", ""));
     }
 
     @Test
     public void whenSubstringAppearsInBothLeftAndRightStringThenReturnCount(){
-        assertEquals(3, StringMatch.stringMatch("xxcaazz", "xxbaaz"));
+        assertEquals(3, stringMatch.stringMatch("xxcaazz", "xxbaaz"));
 
         //lazy me...
-        assertEquals(2, StringMatch.stringMatch("abc", "abc"));
+        assertEquals(2, stringMatch.stringMatch("abc", "abc"));
     }
 
     @Test
     public void whenBothStringDoNotMatchInBothLeftAndRightStringThenReturnZero(){
-        assertEquals(0, StringMatch.stringMatch("abc", "axc"));
+        assertEquals(0, stringMatch.stringMatch("abc", "axc"));
     }
 
 }

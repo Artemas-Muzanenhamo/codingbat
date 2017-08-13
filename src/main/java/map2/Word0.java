@@ -8,7 +8,7 @@ import java.util.Map;
  */
 public class Word0 {
 
-    public static Map<String,Integer> word0(String[] strings) {
+    public Map<String,Integer> word0(String[] strings) {
 
         Map<String, Integer> map = new HashMap<>();
 

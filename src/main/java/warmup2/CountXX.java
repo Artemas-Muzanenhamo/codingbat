@@ -5,7 +5,7 @@ package warmup2;
  */
 public class CountXX {
 
-    public static int countXX(String str){
+    public int countXX(String str){
 
         int num = 0;
         String[] stringArr;

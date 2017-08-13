@@ -5,7 +5,7 @@ package warmup2;
  */
 public class AltPairs {
 
-    public static String altPairs(String str) {
+    public String altPairs(String str) {
         String concat = "";
 
         // Run i by 4 to hit 0, 4, 8, ...

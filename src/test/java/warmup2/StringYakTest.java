@@ -1,5 +1,6 @@
 package warmup2;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -14,25 +15,32 @@ import static org.junit.Assert.assertEquals;
  * stringYak("yak123ya") → "123ya"
  */
 public class StringYakTest {
+    
+    private StringYak stringYak;
+    
+    @Before
+    public void init(){
+        stringYak = new StringYak();
+    }
 
     @Test
     public void whenStringIsEmptyThenReturnEmptyString(){
-        assertEquals("", StringYak.stringYakPak(""));
+        assertEquals("", stringYak.stringYakPak(""));
     }
 
     @Test
     public void whenStringIsLessThan3InLengthThenReturnStringAsIs(){
-        assertEquals("Hi", StringYak.stringYakPak("Hi"));
+        assertEquals("Hi", stringYak.stringYakPak("Hi"));
     }
 
     @Test
     public void whenStringDoesNotContainYakThenReturnStringAsIs(){
-        assertEquals("123ya", StringYak.stringYakPak("123ya"));
-        assertEquals("yaArtemas", StringYak.stringYakPak("yaArtemas"));
+        assertEquals("123ya", stringYak.stringYakPak("123ya"));
+        assertEquals("yaArtemas", stringYak.stringYakPak("yaArtemas"));
     }
 
     @Test
     public void whenStringContainsYakThenReturnStringMinusYak(){
-        assertEquals("123ya", StringYak.stringYakPak("yak123ya"));
+        assertEquals("123ya", stringYak.stringYakPak("yak123ya"));
     }
 }

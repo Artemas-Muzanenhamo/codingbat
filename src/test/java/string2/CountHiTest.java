@@ -1,5 +1,6 @@
 package string2;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
@@ -13,23 +14,35 @@ import static junit.framework.TestCase.assertEquals;
  * countHi("hihi") → 2
  */
 public class CountHiTest {
+    
+    private CountHi countHi;
+    
+    @Before
+    public void init(){
+        countHi = new CountHi();
+    }
+
+    @Test
+    public void whenAnEmptyStringIsPassedThenReturnZero(){
+        assertEquals(0, countHi.countHi(""));
+    }
 
     @Test
     public void whenAStringContains_HI_ThenReturnCount1(){
-        assertEquals(1, CountHi.countHi("hi"));
+        assertEquals(1, countHi.countHi("hi"));
     }
 
     @Test
     public void whenAStringContains_HIHI_ThenReturnCount2(){
-        assertEquals(2, CountHi.countHi("hihi"));
+        assertEquals(2, countHi.countHi("hihi"));
     }
 
     @Test
     public void whenAStringContains_HI_InMultplePlacesThenReturnCountOfHi(){
-        assertEquals(1, CountHi.countHi("abc hi ho"));
+        assertEquals(1, countHi.countHi("abc hi ho"));
 
         //lazy
-        assertEquals(2, CountHi.countHi("ABChi hi"));
+        assertEquals(2, countHi.countHi("ABChi hi"));
     }
 
 }

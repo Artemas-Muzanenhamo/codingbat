@@ -1,5 +1,6 @@
 package warmup2;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -16,13 +17,20 @@ import static org.junit.Assert.assertTrue;
  * array123([1, 1, 2, 1, 2, 3]) → true
  */
 public class Array123Test {
+    
+    private Array123 array123;
+    
+    @Before
+    public void init(){
+        array123 = new Array123();
+    }
 
     @Test
     public void whenArrayIsEmptyThenReturnFalse(){
 
         int[] nums = {};
 
-        assertEquals(false, Array123.arrayCount123(nums));
+        assertEquals(false, array123.arrayCount123(nums));
     }
 
     @Test
@@ -30,7 +38,7 @@ public class Array123Test {
 
         int[] nums = {1, 2, 3, 1};
 
-        assertTrue(Array123.arrayCount123(nums));
+        assertTrue(array123.arrayCount123(nums));
     }
 
     @Test
@@ -38,7 +46,7 @@ public class Array123Test {
 
         int[] nums = {1, 1, 2, 1, 2, 3};
 
-        assertTrue(Array123.arrayCount123(nums));
+        assertTrue(array123.arrayCount123(nums));
     }
 
     @Test
@@ -46,6 +54,6 @@ public class Array123Test {
 
         int[] nums = {1, 2, 4, 2};
 
-        assertFalse(Array123.arrayCount123(nums));
+        assertFalse(array123.arrayCount123(nums));
     }
 }

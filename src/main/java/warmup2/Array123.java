@@ -5,7 +5,7 @@ package warmup2;
  */
 public class Array123 {
 
-    public static boolean arrayCount123(int[] nums){
+    public boolean arrayCount123(int[] nums){
 
         boolean has123 = false;
 

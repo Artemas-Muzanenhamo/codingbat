@@ -1,5 +1,6 @@
 package warmup2;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -15,40 +16,47 @@ import static org.junit.Assert.assertEquals;
  * frontTimes("Abc", 3) → "AbcAbcAbc"
  */
 public class FrontTimesTest {
+    
+    private FrontTimes frontTimes;
+    
+    @Before
+    public void init(){
+        frontTimes = new FrontTimes();
+    }
 
     @Test
     public void whenEmptyStringIsPassedThenReturnEmptyString(){
 
-        assertEquals("", FrontTimes.frontTimes("", 1));
+        assertEquals("", frontTimes.frontTimes("", 1));
 
     }
 
     @Test
     public void whenStringLengthIsLessThan3ThenReturnStringAsIs(){
 
-        assertEquals("Hi", FrontTimes.frontTimes("Hi", 1));
+        assertEquals("Hi", frontTimes.frontTimes("Hi", 1));
 
     }
 
     @Test
     public void whenNonNegative0IsPassedThenReturnEmptyString(){
 
-        assertEquals("", FrontTimes.frontTimes("Hello", 0));
+        assertEquals("", frontTimes.frontTimes("Hello", 0));
 
     }
 
     @Test
     public void whenStringAbcIsPassedThenReturnCopiesNTimes(){
 
-        assertEquals("ChoCho", FrontTimes.frontTimes("Chocolate", 2));
-        assertEquals("ChoChoCho", FrontTimes.frontTimes("Chocolate", 3));
+        assertEquals("ChoCho", frontTimes.frontTimes("Chocolate", 2));
+        assertEquals("ChoChoCho", frontTimes.frontTimes("Chocolate", 3));
 
     }
 
     @Test
     public void whenNonNegative4IsPassedAndStringIsSingleLetterThenReturnCopiesOfString(){
 
-        assertEquals("AAAA", FrontTimes.frontTimes("A", 4));
+        assertEquals("AAAA", frontTimes.frontTimes("A", 4));
 
     }
 

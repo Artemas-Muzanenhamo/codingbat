@@ -5,7 +5,7 @@ package warmup2;
  */
 public class StringSplosion {
 
-    public static String stringSplosion(String str) {
+    public String stringSplosion(String str) {
 
         String tmp = "";
         int counter = 1;
