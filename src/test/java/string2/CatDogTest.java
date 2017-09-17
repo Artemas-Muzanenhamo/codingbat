@@ -17,17 +17,17 @@ import static junit.framework.TestCase.assertTrue;
  * catDog("1cat1cadodog") → true
  */
 public class CatDogTest {
-    
+
     private CatDog catDog;
-    
+
     @Before
     public void init(){
         catDog = new CatDog();
     }
 
     @Test
-    public void whenAnEmptyStringIsPassedThenReturnFalse(){
-        assertFalse(catDog.catDog(""));
+    public void whenAnEmptyStringIsPassedThenReturnTrue(){
+        assertTrue(catDog.catDog(""));
     }
 
     @Test
@@ -36,6 +36,11 @@ public class CatDogTest {
 
         //lazy
         assertTrue(catDog.catDog("1cat1cadodog"));
+    }
+
+    @Test
+    public void whenStringPassedContainsCatTwiceAndDogOnceThenReturnFalse(){
+        assertFalse(catDog.catDog("catdogcat"));
     }
 
     @Test
