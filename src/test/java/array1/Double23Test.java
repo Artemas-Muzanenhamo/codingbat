@@ -1,5 +1,6 @@
 package array1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -18,11 +19,17 @@ import static org.junit.Assert.assertTrue;
  */
 public class Double23Test {
 
+    private Double23 double23;
     private int[] array = {};
+
+    @Before
+    public void init(){
+        double23 = new Double23();
+    }
 
     @Test
     public void whenAnEmptyArrayIsPassedThenReturnFalse(){
-        assertFalse(Double23.double23(array));
+        assertFalse(double23.double23(array));
     }
 
     @Test
@@ -32,7 +39,7 @@ public class Double23Test {
         array[0] = 2;
         array[1] = 2;
 
-        assertTrue(Double23.double23(array));
+        assertTrue(double23.double23(array));
     }
 
     @Test
@@ -41,7 +48,7 @@ public class Double23Test {
         array[0] = 3;
         array[1] = 3;
 
-        assertTrue(Double23.double23(array));
+        assertTrue(double23.double23(array));
     }
 
     @Test
@@ -51,7 +58,7 @@ public class Double23Test {
         array[0] = 4;
         array[1] = 4;
 
-        assertFalse(Double23.double23(array));
+        assertFalse(double23.double23(array));
 
     }
 }
