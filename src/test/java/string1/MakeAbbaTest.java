@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -13,24 +14,31 @@ import static org.junit.Assert.assertEquals;
  * makeAbba("What", "Up") → "WhatUpUpWhat"
  */
 public class MakeAbbaTest {
+    
+    private MakeAbba makeAbba;
+    
+    @Before
+    public void init(){
+        makeAbba = new MakeAbba();
+    }
 
     @Test
     public void whenEmptyStringsIsPassedThenReturnEmptyValue(){
-        assertEquals("", MakeAbba.makeAbba("", ""));
+        assertEquals("", makeAbba.makeAbba("", ""));
     }
 
     @Test
     public void whenStringsArePassedInThenReturnStringInAbbaFormat(){
-        assertEquals("HiByeByeHi", MakeAbba.makeAbba("Hi", "Bye"));
+        assertEquals("HiByeByeHi", makeAbba.makeAbba("Hi", "Bye"));
 
         //lazy
-        assertEquals("YoAliceAliceYo", MakeAbba.makeAbba("Yo", "Alice"));
-        assertEquals("WhatUpUpWhat", MakeAbba.makeAbba("What", "Up"));
+        assertEquals("YoAliceAliceYo", makeAbba.makeAbba("Yo", "Alice"));
+        assertEquals("WhatUpUpWhat", makeAbba.makeAbba("What", "Up"));
     }
 
     @Test
     public void whenOneOfTheStringsIsEmptyThenReturn(){
-        assertEquals("XX", MakeAbba.makeAbba("X", ""));
+        assertEquals("XX", makeAbba.makeAbba("X", ""));
     }
 
 }
