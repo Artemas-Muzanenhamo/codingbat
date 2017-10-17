@@ -4,7 +4,7 @@ package string1;
  * Created by amuzanenhamo on 22/04/2017.
  */
 public class MakeTags {
-    public static String makeTags(String tag, String word) {
+    public String makeTags(String tag, String word) {
 
         String html = "";
 
