@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -15,20 +16,27 @@ import static org.junit.Assert.assertEquals;
  * left2("Hi") → "Hi"
  */
 public class Left2Test {
+    
+    private Left2 left2;
+    
+    @Before
+    public void init(){
+        left2 = new Left2();
+    }
 
     @Test
     public void whenEmptyStringIsPassedInThenReturnEmptyValueBack(){
-        assertEquals("", Left2.left2(""));
+        assertEquals("", left2.left2(""));
     }
 
     @Test
     public void whenStringPassedInIsOfLength1ThenReturnStringAsIs(){
-        assertEquals("A", Left2.left2("A"));
+        assertEquals("A", left2.left2("A"));
     }
 
     @Test
     public void whenTheStringIsNotEmptyThenReturnTheStringWithTheFirst2CharsAtTheEnd(){
-        assertEquals("lloHe", Left2.left2("Hello"));
+        assertEquals("lloHe", left2.left2("Hello"));
     }
 
 }
