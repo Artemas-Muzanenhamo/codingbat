@@ -4,7 +4,7 @@ package string1;
  * Created by amuzanenhamo on 25/04/2017.
  */
 public class HasBad {
-    public static boolean hasBad(String str) {
+    public boolean hasBad(String str) {
 
         // if str is not empty...
         if (!str.isEmpty() && str.length() > 2){

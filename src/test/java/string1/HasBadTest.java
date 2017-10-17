@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -18,29 +19,36 @@ import static org.junit.Assert.assertTrue;
  */
 public class HasBadTest {
 
+    private HasBad hasBad;
+
+    @Before
+    public void init(){
+        hasBad = new HasBad();
+    }
+
     @Test
     public void whenEmptyStringIsPassedThenReturnEmptyValue(){
-        assertFalse(HasBad.hasBad(""));
+        assertFalse(hasBad.hasBad(""));
     }
 
     @Test
     public void whenStringHasLengthOf2ThenReturnStringValueAsIs(){
-        assertFalse(HasBad.hasBad("Hi"));
+        assertFalse(hasBad.hasBad("Hi"));
     }
 
     @Test
     public void whenStringPassedInContainsBADOnTheFirstIndexThenReturnTrue(){
-        assertTrue(HasBad.hasBad("badxx"));
+        assertTrue(hasBad.hasBad("badxx"));
     }
 
     @Test
     public void whenStringPassedInContainsBADOnTheSecondIndexThenReturnTrue(){
-        assertTrue(HasBad.hasBad("xbadxx"));
+        assertTrue(hasBad.hasBad("xbadxx"));
     }
 
     @Test
     public void whenStringPassedInContainsBADFromIndex3ThenReturnFalse(){
-        assertFalse(HasBad.hasBad("xxbadxx"));
+        assertFalse(hasBad.hasBad("xxbadxx"));
     }
 
 }
