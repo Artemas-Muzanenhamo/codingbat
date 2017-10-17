@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -14,14 +15,21 @@ import static org.junit.Assert.assertEquals;
  * helloName("X") → "Hello X!"
  */
 public class HelloNameTest {
+    
+    private HelloName helloName;
+    
+    @Before
+    public void init(){
+        helloName = new HelloName();
+    }
 
     @Test
     public void whenEmptyStringIsPassedThenReturnHelloWithEmptyValue(){
-        assertEquals("Hello!", HelloName.helloName(""));
+        assertEquals("Hello!", helloName.helloName(""));
     }
 
     @Test
     public void whenStringIsPassedThenReturnHelloPlusTheStringWithExclamationMark(){
-        assertEquals("Hello Artemas!", HelloName.helloName("Artemas"));
+        assertEquals("Hello Artemas!", helloName.helloName("Artemas"));
     }
 }
