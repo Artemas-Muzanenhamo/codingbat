@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -16,19 +17,26 @@ import static org.junit.Assert.assertEquals;
  */
 public class ExtraFrontTest {
 
+    private ExtraFront extraFront;
+
+    @Before
+    public void init(){
+        extraFront = new ExtraFront();
+    }
+
     @Test
     public void whenAnEmptyStringIsPassedThenReturnAnEmptyValue(){
-        assertEquals("", ExtraFront.extraFront(""));
+        assertEquals("", extraFront.extraFront(""));
     }
 
     @Test
     public void whenStringPassedInIsLength1ThenReturn3CopiesOfTheString(){
-        assertEquals("AAA", ExtraFront.extraFront("A"));
+        assertEquals("AAA", extraFront.extraFront("A"));
     }
 
     @Test
     public void whenStringPassedInHasLengthGreaterThan1ThenReturn3CopiesOfTheFirst2Chars(){
-        assertEquals("ababab", ExtraFront.extraFront("abel"));
+        assertEquals("ababab", extraFront.extraFront("abel"));
     }
 
 }

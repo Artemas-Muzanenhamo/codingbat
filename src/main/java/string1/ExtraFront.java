@@ -4,7 +4,7 @@ package string1;
  * Created by amuzanenhamo on 04/05/2017.
  */
 public class ExtraFront {
-    public static String extraFront(String str) {
+    public String extraFront(String str) {
 
         // if `str` is not empty...
         if (!str.isEmpty()){
