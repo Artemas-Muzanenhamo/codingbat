@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -15,23 +16,30 @@ import static org.junit.Assert.assertEquals;
  */
 public class AtFirstTest {
 
+    private AtFirst atFirst;
+
+    @Before
+    public void init(){
+        atFirst = new AtFirst();
+    }
+
     @Test
     public void whenAnEmptyStringIsPassedThenReturnDoubleATSymbols(){
-        assertEquals("@@", AtFirst.atFirst(""));
+        assertEquals("@@", atFirst.atFirst(""));
     }
 
     @Test
     public void whenStringPassedInHasLength1ThenReturnTheStringWithTheATSymbol(){
-        assertEquals("h@", AtFirst.atFirst("h"));
+        assertEquals("h@", atFirst.atFirst("h"));
     }
 
     @Test
     public void whenStringPassedInHasLength2ThenReturnStringAsIs(){
-        assertEquals("Hi", AtFirst.atFirst("Hi"));
+        assertEquals("Hi", atFirst.atFirst("Hi"));
     }
 
     @Test
     public void whenStringPassedInHasLengthMoreThan2ThenReturnTheFirst2Chars(){
-        assertEquals("He", AtFirst.atFirst("Hello"));
+        assertEquals("He", atFirst.atFirst("Hello"));
     }
 }

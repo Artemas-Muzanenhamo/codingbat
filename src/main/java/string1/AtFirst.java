@@ -4,7 +4,7 @@ package string1;
  * Created by amuzanenhamo on 25/04/2017.
  */
 public class AtFirst {
-    public static String atFirst(String str) {
+    public String atFirst(String str) {
 
         // if str is not empty...
         if(!str.isEmpty()){
