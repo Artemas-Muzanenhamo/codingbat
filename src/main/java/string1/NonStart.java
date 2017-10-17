@@ -4,7 +4,7 @@ package string1;
  * Created by amuzanenhamo on 24/04/2017.
  */
 public class NonStart {
-    public static String nonStart(String a, String b) {
+    public String nonStart(String a, String b) {
 
         // Check if both `a` and `b` are not empty...
         if((!a.isEmpty() && !b.isEmpty()) && (a.length() > 1 && b.length() > 1)){

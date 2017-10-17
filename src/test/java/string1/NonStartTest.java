@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -14,33 +15,40 @@ import static org.junit.Assert.assertEquals;
  * nonStart("shotl", "java") → "hotlava"
  */
 public class NonStartTest {
+    
+    private NonStart nonStart;
+    
+    @Before
+    public void init(){
+        nonStart = new NonStart();
+    }
 
     @Test
     public void whenStringPassedAreEmptyThenReturnAnEmptyStringValue(){
-        assertEquals("", NonStart.nonStart("", ""));
+        assertEquals("", nonStart.nonStart("", ""));
     }
 
     @Test
     public void whenFirstStringIsPassedAndTheOtherIsEmptyThenReturnPassedValueWithoutTheFirstChar(){
-        assertEquals("ello", NonStart.nonStart("Hello", ""));
+        assertEquals("ello", nonStart.nonStart("Hello", ""));
     }
 
     @Test
     public void whenSecondStringIsPassedAndTheOtherIsEmptyThenReturnPassedValueWithoutTheFirstChar(){
-        assertEquals("orld", NonStart.nonStart("", "World"));
+        assertEquals("orld", nonStart.nonStart("", "World"));
     }
 
     @Test
     public void whenStringsPassedAreLessThan1InLengthTheReturnStringAsIs(){
-        assertEquals("", NonStart.nonStart("A", "B"));
+        assertEquals("", nonStart.nonStart("A", "B"));
     }
 
     @Test
     public void whenStringsPassedInAreOfLength2ThenReturnStringWithoutTheirFirstChars(){
-        assertEquals("BD", NonStart.nonStart("AB", "CD"));
+        assertEquals("BD", nonStart.nonStart("AB", "CD"));
 
         //lazy
-        assertEquals("ellohere", NonStart.nonStart("Hello", "There"));
+        assertEquals("ellohere", nonStart.nonStart("Hello", "There"));
     }
 
 }
