@@ -1,5 +1,6 @@
 package array1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertFalse;
@@ -16,33 +17,39 @@ import static junit.framework.TestCase.assertTrue;
  */
 public class Has23Test {
 
+    private Has23 has23;
     int[] emptyArray = {};
     int[] arrayCase1 = {2};
     int[] arrayCase2 = {2, 5};
     int[] arrayCase3 = {4, 3};
     int[] arrayCase4 = {4, 5};
 
+    @Before
+    public void init(){
+        has23 = new Has23();
+    }
+
     @Test
     public void whenArrayPassedInIsEmptyThenReturnFalse(){
-        assertFalse(Has23.has23(emptyArray));
+        assertFalse(has23.has23(emptyArray));
     }
 
     @Test
     public void whenTheArrayPassedIsLength1ThenReturnFalse(){
-        assertFalse(Has23.has23(arrayCase1));
+        assertFalse(has23.has23(arrayCase1));
     }
 
     @Test
     public void whenTheArrayPassedIsOfLength2ThenReturnTrueIfTwoOrThreeExistsInTheArray(){
-        assertTrue(Has23.has23(arrayCase2));
+        assertTrue(has23.has23(arrayCase2));
 
         //lazy
-        assertTrue(Has23.has23(arrayCase3));
+        assertTrue(has23.has23(arrayCase3));
     }
 
     @Test
     public void whenTheArrayPassedIsOfLength2ThenReturnFalseIfTwoOrThreeDoesNotExistsInTheArray(){
-        assertFalse(Has23.has23(arrayCase4));
+        assertFalse(has23.has23(arrayCase4));
     }
 
 }

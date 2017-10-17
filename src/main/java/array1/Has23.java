@@ -4,7 +4,7 @@ package array1;
  * Created by amuzanenhamo on 09/05/2017.
  */
 public class Has23 {
-    public static boolean has23(int[] nums) {
+    public boolean has23(int[] nums) {
 
         // if `nums` is any less than length 1 then return as it is otherwise..
         if (nums.length > 1){
