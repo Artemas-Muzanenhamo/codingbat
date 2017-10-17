@@ -4,7 +4,7 @@ package string1;
  * Created by amuzanenhamo on 24/04/2017.
  */
 public class FirstHalf {
-    public static String firstHalf(String str) {
+    public String firstHalf(String str) {
 
         // check to see if the string is not empty && if its length is greater than 1
         if(!str.isEmpty() && str.length() > 1){

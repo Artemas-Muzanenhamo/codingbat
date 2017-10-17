@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -14,20 +15,27 @@ import static org.junit.Assert.assertEquals;
  * firstHalf("abcdef") → "abc"
  */
 public class FirstHalfTest {
+    
+    private FirstHalf firstHalf;
+    
+    @Before
+    public void init(){
+        firstHalf = new FirstHalf();
+    }
 
     @Test
     public void whenEmptyStringIsPassedThenReturnEmptyStringValue(){
-        assertEquals("", FirstHalf.firstHalf(""));
+        assertEquals("", firstHalf.firstHalf(""));
     }
 
     @Test
     public void whenStringIsLessThan2ThenReturnStringAsIs(){
-        assertEquals("a", FirstHalf.firstHalf("a"));
+        assertEquals("a", firstHalf.firstHalf("a"));
     }
 
     @Test
     public void whenStringLengthPassedInIsEvenThenReturnFirstHalfOfTheString(){
-        assertEquals("Woo", FirstHalf.firstHalf("WooHoo"));
+        assertEquals("Woo", firstHalf.firstHalf("WooHoo"));
     }
 
 }
