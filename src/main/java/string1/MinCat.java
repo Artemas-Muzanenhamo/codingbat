@@ -4,7 +4,7 @@ package string1;
  * Created by amuzanenhamo on 03/05/2017.
  */
 public class MinCat {
-    public static String minCat(String a, String b) {
+    public String minCat(String a, String b) {
 
         String concatString = ""; //because I don't want to handle `null`
 

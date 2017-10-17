@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -16,41 +17,48 @@ import static org.junit.Assert.assertEquals;
  * minCat("java", "Hello") → "javaello"
  */
 public class MinCatTest {
+    
+    private MinCat minCat;
+    
+    @Before
+    public void init(){
+        minCat = new MinCat();
+    }
 
     @Test
     public void whenEmptyStringsIsPassedThenReturnEmptyValue(){
-        assertEquals("", MinCat.minCat("", ""));
+        assertEquals("", minCat.minCat("", ""));
     }
 
     @Test
     public void whenOnlyTheRightStringIsPassedThenReturnEmptyString(){
-        assertEquals("", MinCat.minCat("", "Hello"));
+        assertEquals("", minCat.minCat("", "Hello"));
     }
 
     @Test
     public void whenOnlyTheLeftStringIsPassedThenReturnEmptyString(){
-        assertEquals("", MinCat.minCat("Hello", ""));
+        assertEquals("", minCat.minCat("Hello", ""));
     }
 
     @Test
     public void whenBothStringsPassedAreEqualToEachOtherThenReturnAConcatenatedString(){
-        assertEquals("HelloArtie", MinCat.minCat("Hello", "Artie"));
+        assertEquals("HelloArtie", minCat.minCat("Hello", "Artie"));
     }
 
     @Test
     public void whenLeftStringPassedIsBiggerInLenthThenOmitCharsFromTheLeftString(){
-        assertEquals("ellojava", MinCat.minCat("Hello", "java"));
+        assertEquals("ellojava", minCat.minCat("Hello", "java"));
 
         //lazy
-        assertEquals("loHi", MinCat.minCat("Hello", "Hi"));
+        assertEquals("loHi", minCat.minCat("Hello", "Hi"));
     }
 
     @Test
     public void whenRightStringPassedIsBiggerInLenthThenOmitCharsFromTheRightString(){
-        assertEquals("javaello", MinCat.minCat("java", "Hello"));
+        assertEquals("javaello", minCat.minCat("java", "Hello"));
 
         //lazy
-        assertEquals("Artemasnenhamo", MinCat.minCat("Artemas", "Muzanenhamo"));
+        assertEquals("Artemasnenhamo", minCat.minCat("Artemas", "Muzanenhamo"));
     }
 
 
