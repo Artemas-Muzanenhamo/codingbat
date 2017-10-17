@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -15,27 +16,34 @@ import static org.junit.Assert.assertEquals;
  * withoutX2("Hi") → "Hi"
  */
 public class WithoutX2Test {
+    
+    private WithoutX2 withoutX2;
+    
+    @Before
+    public void init(){
+        withoutX2 = new WithoutX2();
+    }
 
     @Test
     public void whenEmptyStringIsPassedInThenReturnEmptyValue(){
-        assertEquals("", WithoutX2.withoutX2(""));
+        assertEquals("", withoutX2.withoutX2(""));
     }
 
     @Test
     public void whenStringOfLengthOneIsPassedPlusContainingXThenReturnEmptyValue(){
-        assertEquals("", WithoutX2.withoutX2("x"));
+        assertEquals("", withoutX2.withoutX2("x"));
     }
 
     @Test
     public void whenStringOfLength2ContainsXAtBothIndex1And2ThenReturnEmptyValue(){
-        assertEquals("", WithoutX2.withoutX2("xx"));
+        assertEquals("", withoutX2.withoutX2("xx"));
     }
 
     @Test
     public void whenStringPassedInContainsXAtSecondIndexThenRemoveCharXInString(){
-        assertEquals("Hi", WithoutX2.withoutX2("Hxi"));
+        assertEquals("Hi", withoutX2.withoutX2("Hxi"));
 
         //lazy
-        assertEquals("Hix", WithoutX2.withoutX2("xHix"));
+        assertEquals("Hix", withoutX2.withoutX2("xHix"));
     }
 }

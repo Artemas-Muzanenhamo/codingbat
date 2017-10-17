@@ -5,7 +5,7 @@ package string1;
  * Contributor - Tas
  */
 public class WithoutX2 {
-    public static String withoutX2(String str) {
+    public String withoutX2(String str) {
 
         String value = str;
 
