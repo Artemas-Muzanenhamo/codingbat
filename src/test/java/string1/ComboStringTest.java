@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -16,25 +17,32 @@ import static org.junit.Assert.assertEquals;
  */
 public class ComboStringTest {
 
+    private ComboString comboString;
+
+    @Before
+    public void init(){
+        comboString = new ComboString();
+    }
+
     @Test
     public void whenEmptyStringsArePassedInThenReturnEmptyStringValue(){
-        assertEquals("", ComboString.comboString("", ""));
+        assertEquals("", comboString.comboString("", ""));
     }
 
     @Test
     public void whenOneStringIsEmptyThenReturnTheStringWithAValue(){
-        assertEquals("Artemas", ComboString.comboString("", "Artemas"));
+        assertEquals("Artemas", comboString.comboString("", "Artemas"));
 
         //lazy
-        assertEquals("Takudzwa", ComboString.comboString("Takudzwa", ""));
+        assertEquals("Takudzwa", comboString.comboString("Takudzwa", ""));
     }
 
     @Test
     public void whenStringsPassedThenReturnStringInFormatShortLongShort(){
-        assertEquals("HiArtemasHi", ComboString.comboString("Hi", "Artemas"));
+        assertEquals("HiArtemasHi", comboString.comboString("Hi", "Artemas"));
 
         //lazy
-        assertEquals("baaab", ComboString.comboString("aaa", "b"));
+        assertEquals("baaab", comboString.comboString("aaa", "b"));
     }
 
 }
