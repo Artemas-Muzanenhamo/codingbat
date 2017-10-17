@@ -4,7 +4,7 @@ package string1;
  * Created by amuzanenhamo on 24/04/2017.
  */
 public class EndsLy {
-    public static boolean endsLy(String str) {
+    public boolean endsLy(String str) {
 
         // if str is not empty
         if (!str.isEmpty() && str.length() > 1){

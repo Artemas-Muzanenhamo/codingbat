@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -15,29 +16,36 @@ import static org.junit.Assert.assertTrue;
  * endsLy("oddy") → false
  */
 public class EndsLyTest {
+    
+    private EndsLy endsLy;
+    
+    @Before
+    public void init(){
+        endsLy = new EndsLy();
+    }
 
     @Test
     public void whenEmptyStringIsPassedThenReturnEmptyValue(){
-        assertFalse(EndsLy.endsLy(""));
+        assertFalse(endsLy.endsLy(""));
     }
 
     @Test
     public void whenStringPassedInDoesNotContainLYAndLengthIsLessThan1ThenReturnFalse(){
-        assertFalse(EndsLy.endsLy("y"));
+        assertFalse(endsLy.endsLy("y"));
     }
 
     @Test
     public void whenStringPassedInDoesNotContainLYThenReturnFalse(){
-        assertFalse(EndsLy.endsLy("lg"));
+        assertFalse(endsLy.endsLy("lg"));
 
     }
 
     @Test
     public void whenStringPassedInDoesContainLYThenReturnFalse(){
-        assertTrue(EndsLy.endsLy("ly"));
+        assertTrue(endsLy.endsLy("ly"));
 
         //lazy
-        assertTrue(EndsLy.endsLy("oddly"));
+        assertTrue(endsLy.endsLy("oddly"));
 
     }
 
