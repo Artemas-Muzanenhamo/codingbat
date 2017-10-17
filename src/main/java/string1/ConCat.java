@@ -4,7 +4,7 @@ package string1;
  * Created by amuzanenhamo on 27/04/2017.
  */
 public class ConCat {
-    public static String conCat(String a, String b) {
+    public String conCat(String a, String b) {
 
         String result = "";
 

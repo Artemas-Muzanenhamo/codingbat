@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -15,27 +16,34 @@ import static org.junit.Assert.assertEquals;
  * conCat("abc", "") → "abc"
  */
 public class ConCatTest {
+    
+    private ConCat conCat;
+    
+    @Before
+    public void init(){
+        conCat = new ConCat();
+    }
 
     @Test
     public void whenEmptyStringsArePassedInThenReturnEmptyValues(){
-        assertEquals("", ConCat.conCat("", ""));
+        assertEquals("", conCat.conCat("", ""));
     }
 
     @Test
     public void whenLeftStringIsPassedThenReturnLeftConcatenatedString(){
-        assertEquals("cat", ConCat.conCat("cat", ""));
+        assertEquals("cat", conCat.conCat("cat", ""));
     }
 
     @Test
     public void whenRightStringIsPassedThenReturnRightConcatenatedString(){
-        assertEquals("dog", ConCat.conCat("", "dog"));
+        assertEquals("dog", conCat.conCat("", "dog"));
     }
 
     @Test
     public void whenStringsArePassedInThenReturnConcatenatedString(){
-        assertEquals("dogcat", ConCat.conCat("dog", "cat"));
+        assertEquals("dogcat", conCat.conCat("dog", "cat"));
 
         //lazy
-        assertEquals("abcat", ConCat.conCat("abc", "cat"));
+        assertEquals("abcat", conCat.conCat("abc", "cat"));
     }
 }
