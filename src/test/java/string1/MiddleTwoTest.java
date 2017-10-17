@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -14,24 +15,31 @@ import static org.junit.Assert.assertEquals;
  * middleTwo("Practice") → "ct"
  */
 public class MiddleTwoTest {
+    
+    private MiddleTwo middleTwo;
+    
+    @Before
+    public void init(){
+        middleTwo = new MiddleTwo();
+    }
 
     @Test
     public void whenEmptyStringIsPassedThenReturnEmptyValue(){
-        assertEquals("", MiddleTwo.middleTwo(""));
+        assertEquals("", middleTwo.middleTwo(""));
     }
 
     @Test
     public void whenStringPassedIsOfLength1ThenReturnStringAsIs(){
-        assertEquals("X", MiddleTwo.middleTwo("X"));
+        assertEquals("X", middleTwo.middleTwo("X"));
     }
 
     @Test
     public void whenStringPassedInIsOfEvenLengthThenReturnTheMiddleCharsOfTheString(){
-        assertEquals("od", MiddleTwo.middleTwo("code"));
+        assertEquals("od", middleTwo.middleTwo("code"));
 
         //lazy
-        assertEquals("ri", MiddleTwo.middleTwo("String"));
-        assertEquals("ct", MiddleTwo.middleTwo("Practice"));
+        assertEquals("ri", middleTwo.middleTwo("String"));
+        assertEquals("ct", middleTwo.middleTwo("Practice"));
     }
 
 }
