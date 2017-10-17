@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -15,23 +16,30 @@ import static org.junit.Assert.assertEquals;
  * nTwice("Chocolate", 1) → "Ce"
  */
 public class NTwiceTest {
-
+    
+    private NTwice nTwice;
+    
+    @Before
+    public void init(){
+        nTwice = new NTwice();
+    }
+    
     @Test
     public void whenEmptyStringIsPassedThenReturnEmptyValue(){
-        assertEquals("", NTwice.nTwice("", 0));
+        assertEquals("", nTwice.nTwice("", 0));
     }
 
     @Test
     public void whenIntNIsZeroThenReturnEmptyValue(){
-        assertEquals("", NTwice.nTwice("Artemas", 0));
+        assertEquals("", nTwice.nTwice("Artemas", 0));
     }
 
     @Test
     public void whenStringIsPassedInWithTheIntNThenReturnTheStringValueMadeOfTheFirstAndLastChars(){
-        assertEquals("Helo", NTwice.nTwice("Hello", 2));
+        assertEquals("Helo", nTwice.nTwice("Hello", 2));
 
         //lazy
-        assertEquals("Choate", NTwice.nTwice("Chocolate", 3));
-        assertEquals("Ce", NTwice.nTwice("Chocolate", 1));
+        assertEquals("Choate", nTwice.nTwice("Chocolate", 3));
+        assertEquals("Ce", nTwice.nTwice("Chocolate", 1));
     }
 }
