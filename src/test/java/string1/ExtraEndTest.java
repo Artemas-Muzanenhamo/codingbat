@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -14,25 +15,32 @@ import static org.junit.Assert.assertEquals;
  * extraEnd("Hi") → "HiHiHi"
  */
 public class ExtraEndTest {
+    
+    private ExtraEnd extraEnd;
+    
+    @Before
+    public void init(){
+        extraEnd = new ExtraEnd();
+    }
 
     @Test
     public void whenEmptyStringIsPassedThenReturnEmptyValue(){
-        assertEquals("", ExtraEnd.extraEnd(""));
+        assertEquals("", extraEnd.extraEnd(""));
     }
 
     @Test
     public void whenStringPassedIsLength2ThenReturnStringAsIs(){
-        assertEquals("HiHiHi", ExtraEnd.extraEnd("Hi"));
+        assertEquals("HiHiHi", extraEnd.extraEnd("Hi"));
     }
 
     @Test
     public void whenStringIsPassedAndLengthIs3ThenReturnThreeCopiesOfTheString(){
-        assertEquals("rtrtrt", ExtraEnd.extraEnd("Art"));
+        assertEquals("rtrtrt", extraEnd.extraEnd("Art"));
     }
 
     @Test
     public void whenStringIsPassedAndLengthIsMoreThanThreeThenReturnThreeCopiesOfTheLastTwoChars(){
-        assertEquals("asasas", ExtraEnd.extraEnd("Artemas"));
+        assertEquals("asasas", extraEnd.extraEnd("Artemas"));
     }
 
 }

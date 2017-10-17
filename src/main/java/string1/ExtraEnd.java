@@ -4,7 +4,7 @@ package string1;
  * Created by amuzanenhamo on 24/04/2017.
  */
 public class ExtraEnd {
-    public static String extraEnd(String str) {
+    public String extraEnd(String str) {
 
         String end = "";
 
