@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -16,24 +17,31 @@ import static org.junit.Assert.assertEquals;
  * firstTwo("ab") → "ab"
  */
 public class FirstTwoTest {
+    
+    private FirstTwo firstTwo;
+    
+    @Before
+    public void init(){
+        firstTwo = new FirstTwo();
+    }
 
     @Test
     public void whenEmptyStringIsPassedInThenReturnEmptyString(){
-        assertEquals("", FirstTwo.firstTwo(""));
+        assertEquals("", firstTwo.firstTwo(""));
     }
 
     @Test
     public void whenStringPassedIsLength1ThenReturnStringAsIs(){
-        assertEquals("X", FirstTwo.firstTwo("X"));
+        assertEquals("X", firstTwo.firstTwo("X"));
     }
 
     @Test
     public void whenStringPassedIsLength2ThenReturnTheTwoChars(){
-        assertEquals("ab", FirstTwo.firstTwo("ab"));
+        assertEquals("ab", firstTwo.firstTwo("ab"));
     }
 
     @Test
     public void whenStringPassedHasLengthMoreThan3ThenReturnFirst2CharsOfTheString(){
-        assertEquals("Ar", FirstTwo.firstTwo("Artemas"));
+        assertEquals("Ar", firstTwo.firstTwo("Artemas"));
     }
 }

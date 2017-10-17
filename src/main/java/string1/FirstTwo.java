@@ -4,7 +4,7 @@ package string1;
  * Created by amuzanenhamo on 24/04/2017.
  */
 public class FirstTwo {
-    public static String firstTwo(String str) {
+    public String firstTwo(String str) {
 
         // If String str is not empty and it's length is greater than 1...
         if (!str.isEmpty() && str.length() > 1){
