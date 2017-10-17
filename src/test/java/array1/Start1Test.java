@@ -1,5 +1,6 @@
 package array1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -16,16 +17,19 @@ import static org.junit.Assert.assertEquals;
  * start1([1, 2], []) → 1
  */
 public class Start1Test {
-
+    
+    private Start1 start1;
     private int[] actualArray1 = {};
     private int[] actualArray2 = {};
-
-    private int[] expectedArray1 = {};
-    private int[] expectedArray2 = {};
-
+    
+    @Before
+    public void init(){
+        start1 = new Start1();
+    }
+    
     @Test
     public void whenEmptyArraysArePassedInTheReturn0(){
-        assertEquals(0, Start1.start1(actualArray1, actualArray2));
+        assertEquals(0, start1.start1(actualArray1, actualArray2));
     }
 
     @Test
@@ -35,7 +39,7 @@ public class Start1Test {
         actualArray1[0] = 1;
         actualArray1[1] = 2;
 
-        assertEquals(1, Start1.start1(actualArray1, actualArray2));
+        assertEquals(1, start1.start1(actualArray1, actualArray2));
     }
 
     @Test
@@ -45,7 +49,7 @@ public class Start1Test {
         actualArray2[0] = 1;
         actualArray2[1] = 2;
 
-        assertEquals(1, Start1.start1(actualArray1, actualArray2));
+        assertEquals(1, start1.start1(actualArray1, actualArray2));
     }
 
     @Test
@@ -59,7 +63,7 @@ public class Start1Test {
         actualArray2[0] = 1;
         actualArray2[1] = 2;
 
-        assertEquals(2, Start1.start1(actualArray1, actualArray2));
+        assertEquals(2, start1.start1(actualArray1, actualArray2));
     }
 
 

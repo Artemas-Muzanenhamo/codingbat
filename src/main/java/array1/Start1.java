@@ -4,7 +4,7 @@ package array1;
  * Created by amuzanenhamo on 26/05/2017.
  */
 public class Start1 {
-    public static int start1(int[] a, int[] b) {
+    public int start1(int[] a, int[] b) {
 
         int count = 0;
 
