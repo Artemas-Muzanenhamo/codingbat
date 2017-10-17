@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -14,24 +15,31 @@ import static org.junit.Assert.assertEquals;
  * lastTwo("ab") → "ba"
  */
 public class LastTwoTest {
+    
+    private LastTwo lastTwo;
+    
+    @Before
+    public void init(){
+        lastTwo = new LastTwo();
+    }
 
     @Test
     public void whenEmptyStringIsPassedThenReturnEmptyValue(){
-        assertEquals("", LastTwo.lastTwo(""));
+        assertEquals("", lastTwo.lastTwo(""));
     }
 
     @Test
     public void whenStringPassedHasLengthLessThan2ThenReturnStringAsIS(){
-        assertEquals("a", LastTwo.lastTwo("a"));
+        assertEquals("a", lastTwo.lastTwo("a"));
     }
 
     @Test
     public void whenStringPassedInHasLength2ThenReturnStringWithSwappedValues(){
-        assertEquals("ba", LastTwo.lastTwo("ab"));
+        assertEquals("ba", lastTwo.lastTwo("ab"));
     }
 
     @Test
     public void whenStringIsPassedInThenReturnStringValueWithLastCharsSwapped(){
-        assertEquals("codign", LastTwo.lastTwo("coding"));
+        assertEquals("codign", lastTwo.lastTwo("coding"));
     }
 }

@@ -4,7 +4,7 @@ package string1;
  * Created by amuzanenhamo on 27/04/2017.
  */
 public class LastTwo {
-    public static String lastTwo(String str) {
+    public String lastTwo(String str) {
 
         String secondLastIndex = "";
         String lastIndex = "";
