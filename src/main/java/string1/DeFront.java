@@ -4,7 +4,7 @@ package string1;
  * Created by amuzanenhamo on 04/05/2017.
  */
 public class DeFront {
-    public static String deFront(String str) {
+    public String deFront(String str) {
 
         String firstChar = "";
         String secondChar = "";

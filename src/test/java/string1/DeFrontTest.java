@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -16,41 +17,48 @@ import static org.junit.Assert.assertEquals;
  * deFront("away") → "aay"
  */
 public class DeFrontTest {
+    
+    public DeFront deFront;
+    
+    @Before
+    public void init(){
+        deFront = new DeFront();
+    }
 
     @Test
     public void whenEmptyStringIsPassedThenReturnEmptyValue(){
-        assertEquals("", DeFront.deFront(""));
+        assertEquals("", deFront.deFront(""));
     }
 
     @Test
     public void whenFirstCharIsAThenReturnStringValueA(){
-        assertEquals("a", DeFront.deFront("a"));
+        assertEquals("a", deFront.deFront("a"));
     }
 
     @Test
     public void whenTheSecondCharIsBThenReturnStringValueB(){
-        assertEquals("b", DeFront.deFront("tb"));
+        assertEquals("b", deFront.deFront("tb"));
     }
 
     @Test
     public void whenStringPassedInContainsAPlusBAsFirst2CharsThenReturnAB(){
-        assertEquals("ab", DeFront.deFront("ab"));
+        assertEquals("ab", deFront.deFront("ab"));
     }
 
     @Test
     public void whenStringIsPassedAndDoesNotContainAPlusBAtFirstThenReturnStringWithoutTheFirst2Chars(){
-        assertEquals("llo", DeFront.deFront("Hello"));
+        assertEquals("llo", deFront.deFront("Hello"));
 
         //lazy
-        assertEquals("va", DeFront.deFront("java"));
+        assertEquals("va", deFront.deFront("java"));
     }
 
     @Test
     public void whenStringIsPassedAndContainsAPlusBAtFirstThenReturnStringWithTheFirst2Chars(){
-        assertEquals("aay", DeFront.deFront("away"));
+        assertEquals("aay", deFront.deFront("away"));
 
         //lazy
-        assertEquals("abel", DeFront.deFront("abel"));
-        assertEquals("atemas", DeFront.deFront("artemas"));
+        assertEquals("abel", deFront.deFront("abel"));
+        assertEquals("atemas", deFront.deFront("artemas"));
     }
 }
