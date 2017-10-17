@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -15,27 +16,34 @@ import static org.junit.Assert.assertEquals;
  * right2("Hi") → "Hi"
  */
 public class Right2Test {
+    
+    private Right2 right2;
+    
+    @Before
+    public void init(){
+        right2 = new Right2();
+    }
 
     @Test
     public void whenStringPassedInIsEmptyThenReturnEmptyValue(){
-        assertEquals("", Right2.right2(""));
+        assertEquals("", right2.right2(""));
     }
 
     @Test
     public void whenStringPassedInIsOfLength1ThenReturnStringAsIs(){
-        assertEquals("A", Right2.right2("A"));
+        assertEquals("A", right2.right2("A"));
     }
 
     @Test
     public void whenStringPassedInIsLength2ThenReturnStringAsIs(){
-        assertEquals("Hi", Right2.right2("Hi"));
+        assertEquals("Hi", right2.right2("Hi"));
     }
 
     @Test
     public void whenStringPassedInIsBiggerThanLength2ThenReturnStringWithTheLast2CharsAtTheBeginning(){
-        assertEquals("vaja", Right2.right2("java"));
+        assertEquals("vaja", right2.right2("java"));
 
         //lazy
-        assertEquals("loHel", Right2.right2("Hello"));
+        assertEquals("loHel", right2.right2("Hello"));
     }
 }
