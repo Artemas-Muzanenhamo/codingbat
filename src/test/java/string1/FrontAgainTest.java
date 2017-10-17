@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -15,28 +16,35 @@ import static org.junit.Assert.assertTrue;
  * frontAgain("ed") → true
  */
 public class FrontAgainTest {
+    
+    private FrontAgain frontAgain;
+    
+    @Before
+    public void init(){
+        frontAgain = new FrontAgain();
+    }
 
     @Test
     public void whenEmptyStringInPassedInThenReturnFalse(){
-        assertFalse(FrontAgain.frontAgain(""));
+        assertFalse(frontAgain.frontAgain(""));
     }
 
     @Test
     public void whenStringPassedInIsLength1ThenReturnStringAsIs(){
-        assertFalse(FrontAgain.frontAgain("A"));
+        assertFalse(frontAgain.frontAgain("A"));
     }
 
     @Test
     public void whenStringPassedInContainsEdAtTheFrontAndBackAndIsLength2ThenReturnTrue(){
-        assertTrue(FrontAgain.frontAgain("ed"));
+        assertTrue(frontAgain.frontAgain("ed"));
     }
 
     @Test
     public void whenStringPassedInContainsEdAtTheFrontAndBackThenReturnTrue(){
-        assertTrue(FrontAgain.frontAgain("edited"));
+        assertTrue(frontAgain.frontAgain("edited"));
 
         //lazy
-        assertTrue(FrontAgain.frontAgain("mama"));
-        assertTrue(FrontAgain.frontAgain("pizza pi"));
+        assertTrue(frontAgain.frontAgain("mama"));
+        assertTrue(frontAgain.frontAgain("pizza pi"));
     }
 }

@@ -4,7 +4,7 @@ package string1;
  * Created by amuzanenhamo on 02/05/2017.
  */
 public class FrontAgain {
-    public static boolean frontAgain(String str) {
+    public boolean frontAgain(String str) {
 
         String frontString;
         String backString;
