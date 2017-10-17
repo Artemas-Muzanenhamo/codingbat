@@ -1,5 +1,6 @@
 package array1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -18,12 +19,19 @@ import static org.junit.Assert.assertEquals;
  * maxTriple([5, 2, 3]) → 5
  */
 public class MaxTripleTest {
+    
+    private MaxTriple maxTriple;
+    
+    @Before
+    public void init(){
+        maxTriple = new MaxTriple();
+    }
 
     int[] array = {};
 
     @Test
     public void whenAnEmptyArrayIsPassedThenReturnZero(){
-        assertEquals(0, MaxTriple.maxTriple(array));
+        assertEquals(0, maxTriple.maxTriple(array));
     }
 
     @Test
@@ -31,7 +39,7 @@ public class MaxTripleTest {
 
         array = new int[]{1};
 
-        assertEquals(1, MaxTriple.maxTriple(array));
+        assertEquals(1, maxTriple.maxTriple(array));
     }
 
     @Test
@@ -39,7 +47,7 @@ public class MaxTripleTest {
 
         array = new int[]{1, 2};
 
-        assertEquals(0, MaxTriple.maxTriple(array));
+        assertEquals(0, maxTriple.maxTriple(array));
 
     }
 
@@ -48,7 +56,7 @@ public class MaxTripleTest {
 
         array = new int[]{1, 2, 3};
 
-        assertEquals(3, MaxTriple.maxTriple(array));
+        assertEquals(3, maxTriple.maxTriple(array));
 
     }
 }
