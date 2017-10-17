@@ -4,7 +4,7 @@ package string1;
  * Created by amuzanenhamo on 25/04/2017.
  */
 public class MiddleThree {
-    public static String middleThree(String str) {
+    public String middleThree(String str) {
 
         // If str is not empty...
         if(!str.isEmpty() && str.length() > 3){

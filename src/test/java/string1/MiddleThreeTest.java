@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -14,28 +15,35 @@ import static org.junit.Assert.assertEquals;
  * middleThree("solving") → "lvi"
  */
 public class MiddleThreeTest {
+    
+    private MiddleThree middleThree;
+    
+    @Before
+    public void init(){
+        middleThree = new MiddleThree();
+    }
 
     @Test
     public void whenAnEmptyStringIsPassedThenReturnAnEmptyValue(){
-        assertEquals("", MiddleThree.middleThree(""));
+        assertEquals("", middleThree.middleThree(""));
     }
 
     @Test
     public void whenStringPassedHasLengthLessThan3ThenReturnTheStringValueAsIs(){
-        assertEquals("Hi", MiddleThree.middleThree("Hi"));
+        assertEquals("Hi", middleThree.middleThree("Hi"));
     }
 
     @Test
     public void whenStringPassedInHasLength3ThenReturnStringAsIs(){
-        assertEquals("Art", MiddleThree.middleThree("Art"));
+        assertEquals("Art", middleThree.middleThree("Art"));
     }
 
     @Test
     public void whenStringIsPassedInAndIsOddThenReturnMiddle3Chars(){
-        assertEquals("and", MiddleThree.middleThree("Candy"));
+        assertEquals("and", middleThree.middleThree("Candy"));
 
         //lazy
-        assertEquals("lvi", MiddleThree.middleThree("solving"));
+        assertEquals("lvi", middleThree.middleThree("solving"));
     }
 
 }
