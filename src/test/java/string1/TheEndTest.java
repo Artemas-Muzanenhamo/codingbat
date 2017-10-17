@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -15,35 +16,42 @@ import static org.junit.Assert.assertEquals;
  * theEnd("oh", true) → "o"
  */
 public class TheEndTest {
+    
+    private TheEnd theEnd;
+    
+    @Before
+    public void init(){
+        theEnd = new TheEnd();
+    }
 
     @Test
     public void whenStringIsEmptyThenReturnEmptyValue(){
-        assertEquals("", TheEnd.theEnd("", true));
+        assertEquals("", theEnd.theEnd("", true));
     }
 
     @Test
     public void whenStringPassedHasLength1AndFrontIsSetToTrueThenReturnValue(){
-        assertEquals("o", TheEnd.theEnd("o", true));
+        assertEquals("o", theEnd.theEnd("o", true));
     }
 
     @Test
     public void whenStringPassedHasLength1AndFrontIsSetToFalseThenReturnValue(){
-        assertEquals("o", TheEnd.theEnd("o", false));
+        assertEquals("o", theEnd.theEnd("o", false));
     }
 
     @Test
     public void whenStringPassedHasLengthMoreThan1ThenReturnFrontCharacterIfFrontIsSetToTrue(){
-        assertEquals("H", TheEnd.theEnd("Hello", true));
+        assertEquals("H", theEnd.theEnd("Hello", true));
 
         //lazy
-        assertEquals("O", TheEnd.theEnd("Oh", true));
+        assertEquals("O", theEnd.theEnd("Oh", true));
     }
 
     @Test
     public void whenStringPassedHasLengthMoreThan1ThenReturnLastCharacterIfFrontIsSetToFalse(){
-        assertEquals("o", TheEnd.theEnd("Hello", false));
+        assertEquals("o", theEnd.theEnd("Hello", false));
 
         //lazy
-        assertEquals("h", TheEnd.theEnd("Oh", false));
+        assertEquals("h", theEnd.theEnd("Oh", false));
     }
 }

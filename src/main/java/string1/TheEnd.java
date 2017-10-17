@@ -4,7 +4,7 @@ package string1;
  * Created by amuzanenhamo on 24/04/2017.
  */
 public class TheEnd {
-    public static String theEnd(String str, boolean front) {
+    public String theEnd(String str, boolean front) {
 
         // check if `str` is not empty...
         if(!str.isEmpty()){
