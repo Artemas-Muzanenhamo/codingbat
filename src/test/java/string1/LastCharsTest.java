@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -15,24 +16,31 @@ import static org.junit.Assert.assertEquals;
  * lastChars("hi", "") → "h@"
  */
 public class LastCharsTest {
+    
+    private LastChars lastChars;
+    
+    @Before
+    public void init(){
+        lastChars = new LastChars();
+    }
 
     @Test
     public void whenEmptyStringIsPassedThenReturnEmptyValue(){
-        assertEquals("@@", LastChars.lastChars("", ""));
+        assertEquals("@@", lastChars.lastChars("", ""));
     }
 
     @Test
     public void whenLeftParameterIsEmptyThenReturnTheRightString(){
-        assertEquals("@a", LastChars.lastChars("", "java"));
+        assertEquals("@a", lastChars.lastChars("", "java"));
     }
 
     @Test
     public void whenRightParameterIsEmptyThenReturnTheLeftString(){
-        assertEquals("j@", LastChars.lastChars("java", ""));
+        assertEquals("j@", lastChars.lastChars("java", ""));
     }
 
     @Test
     public void whenStringsArePassedInThenReturnFirstCharAndLastCharAsStringValue(){
-        assertEquals("ya", LastChars.lastChars("yo", "java"));
+        assertEquals("ya", lastChars.lastChars("yo", "java"));
     }
 }

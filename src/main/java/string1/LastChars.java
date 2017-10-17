@@ -4,7 +4,7 @@ package string1;
  * Created by amuzanenhamo on 26/04/2017.
  */
 public class LastChars {
-    public static String lastChars(String a, String b) {
+    public String lastChars(String a, String b) {
 
         String value = "@@";
 
