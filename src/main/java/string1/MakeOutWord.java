@@ -4,7 +4,7 @@ package string1;
  * Created by amuzanenhamo on 22/04/2017.
  */
 public class MakeOutWord {
-    public static String makeOutWord(String out, String word) {
+    public String makeOutWord(String out, String word) {
 
         String madeWord = "";
 

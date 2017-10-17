@@ -1,5 +1,6 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -15,28 +16,35 @@ import static org.junit.Assert.assertEquals;
  * makeOutWord("[[]]", "word") → "[[word]]"
  */
 public class MakeOutWordTest {
+    
+    private MakeOutWord makeOutWord;
+    
+    @Before
+    public void init(){
+        makeOutWord = new MakeOutWord();
+    }
 
     @Test
     public void whenEmptyStringsArePassedThenReturnEmptyStringAsIs(){
-        assertEquals("", MakeOutWord.makeOutWord("", ""));
+        assertEquals("", makeOutWord.makeOutWord("", ""));
     }
 
     @Test
     public void whenTheOutStringIsEmptyButTheWordStringIsPassedThenReturnTheWordOnly(){
-        assertEquals("Hello", MakeOutWord.makeOutWord("", "Hello"));
+        assertEquals("Hello", makeOutWord.makeOutWord("", "Hello"));
     }
 
     @Test
     public void whenTheWordStringIsEmptyButTheOutStringIsPassedThenReturnTheOutOnly(){
-        assertEquals("<<>>", MakeOutWord.makeOutWord("<<>>", ""));
+        assertEquals("<<>>", makeOutWord.makeOutWord("<<>>", ""));
     }
 
     @Test
     public void whenBothTheOutStringAndTheWordStringArePassedThenReturnTheOutWithTheStringInTheMiddle(){
-        assertEquals("<<Yay>>", MakeOutWord.makeOutWord("<<>>", "Yay"));
+        assertEquals("<<Yay>>", makeOutWord.makeOutWord("<<>>", "Yay"));
 
         //lazy
-        assertEquals("<Artemas>", MakeOutWord.makeOutWord("<>", "Artemas"));
+        assertEquals("<Artemas>", makeOutWord.makeOutWord("<>", "Artemas"));
     }
 
 }
