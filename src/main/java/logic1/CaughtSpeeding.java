@@ -10,7 +10,11 @@ public class CaughtSpeeding {
             return 0;
         }
 
-        if ( (speed > 60 && speed <= 80 && !isBirthday) || (speed > 65 && speed <= 85 && isBirthday) ){
+        if (speed > 60 && speed <= 80 && !isBirthday){
+            return 1;
+        }
+
+        if (speed > 65 && speed <= 85 && isBirthday) {
             return 1;
         }
 
