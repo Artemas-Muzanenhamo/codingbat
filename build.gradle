@@ -32,3 +32,5 @@ group = 'com.artemas.example'
 version = '0.0.1-SNAPSHOT'
 description = 'Artemas Project'
 sourceCompatibility = '1.8'
+
+check.dependsOn jacocoTestReport
