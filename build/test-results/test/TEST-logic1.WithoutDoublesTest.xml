@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="logic1.WithoutDoublesTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-01-01T12:58:13" hostname="Artemass-MacBook-Pro.local" time="0.001">
+  <properties/>
+  <testcase name="whenTheDiceRolledIsMadeUpOf2And3AndNoDoublesIsFalseThenReturn5" classname="logic1.WithoutDoublesTest" time="0.0"/>
+  <testcase name="whenTheDiceRolledIsMadeUpOf6And6AndNoDoubleIsTrueThenReturn7" classname="logic1.WithoutDoublesTest" time="0.0"/>
+  <testcase name="whenTheDiceRolledIsMadeUpOf3And3AndNoDoubleIsTrueThenReturn7" classname="logic1.WithoutDoublesTest" time="0.0"/>
+  <testcase name="whenTheDiceRolledIsMadeUpOf3And3AndNoDoublesIsFalseThenReturn6" classname="logic1.WithoutDoublesTest" time="0.0"/>
+  <testcase name="whenTheDiceRolledIsMadeUpOf2And3AndNoDoublesIsTrueThenReturn5" classname="logic1.WithoutDoublesTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

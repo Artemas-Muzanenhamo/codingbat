@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="functional2.Square56Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-01-01T12:58:13" hostname="Artemass-MacBook-Pro.local" time="0.001">
+  <properties/>
+  <testcase name="whenANumberInAListResultsIn5_Or_6ThenOmitItFromTheList" classname="functional2.Square56Test" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

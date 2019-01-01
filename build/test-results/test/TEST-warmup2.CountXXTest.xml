@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="warmup2.CountXXTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-01-01T12:58:12" hostname="Artemass-MacBook-Pro.local" time="0.004">
+  <properties/>
+  <testcase name="whenGenericStringIsPassedThenReturnZero" classname="warmup2.CountXXTest" time="0.0"/>
+  <testcase name="whenStringXXIsPassedThenReturnOneOccurancesAsResult" classname="warmup2.CountXXTest" time="0.0"/>
+  <testcase name="whenStringXXXIsPassedThenReturnTwoOccurancesAsResult" classname="warmup2.CountXXTest" time="0.0"/>
+  <testcase name="whenEmptyStringIsPassedThenReturnZero" classname="warmup2.CountXXTest" time="0.0"/>
+  <testcase name="whenStringXXXXIsPassedThenReturnThreeOccurancesAsResult" classname="warmup2.CountXXTest" time="0.003"/>
+  <system-out><![CDATA[3
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

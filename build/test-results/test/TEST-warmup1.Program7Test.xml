@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="warmup1.Program7Test" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-01-01T12:58:13" hostname="Artemass-MacBook-Pro.local" time="0.0">
+  <properties/>
+  <testcase name="whenNegativeNumbersArePassedInThenReturnTheNearestNumber" classname="warmup1.Program7Test" time="0.0"/>
+  <testcase name="whenBothNumbersAreEqualThenReturnZero" classname="warmup1.Program7Test" time="0.0"/>
+  <testcase name="whenNumberIsNearestToTenThenReturnTheNumber" classname="warmup1.Program7Test" time="0.0"/>
+  <testcase name="whenNumbersArePassedInThenReturnNumber" classname="warmup1.Program7Test" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

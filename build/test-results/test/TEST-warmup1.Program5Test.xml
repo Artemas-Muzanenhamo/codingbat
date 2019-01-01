@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="warmup1.Program5Test" tests="9" skipped="0" failures="0" errors="0" timestamp="2019-01-01T12:58:13" hostname="Artemass-MacBook-Pro.local" time="0.001">
+  <properties/>
+  <testcase name="whenEmptyStringIsPassedThenReturnEmptyString" classname="warmup1.Program5Test" time="0.001"/>
+  <testcase name="whenStringDoesntMatchFirstAndSecondCharThenReturnedEmptyString" classname="warmup1.Program5Test" time="0.0"/>
+  <testcase name="whenFirstCharIsOThenReturnO" classname="warmup1.Program5Test" time="0.0"/>
+  <testcase name="whenFirstCharIsOAndSecondCharIsZThenReturnOZ" classname="warmup1.Program5Test" time="0.0"/>
+  <testcase name="whenSingleStringOIsPassedThenReturnO" classname="warmup1.Program5Test" time="0.0"/>
+  <testcase name="whenStringLengthIsLessThan2CharsThenReturnStringAsIs" classname="warmup1.Program5Test" time="0.0"/>
+  <testcase name="whenSecondCharIsZThenReturnZ" classname="warmup1.Program5Test" time="0.0"/>
+  <testcase name="whenStringContainsZThenReturnEmptyString" classname="warmup1.Program5Test" time="0.0"/>
+  <testcase name="whenStringContainsZZZZThenReturnZ" classname="warmup1.Program5Test" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

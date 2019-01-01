@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="warmup2.NoTriplesTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-01-01T12:58:12" hostname="Artemass-MacBook-Pro.local" time="0.001">
+  <properties/>
+  <testcase name="whenArrayDoesNotHaveTripleValuesInARowThenReturnTrue" classname="warmup2.NoTriplesTest" time="0.001"/>
+  <testcase name="whenArrayContainsTriple3InARowThenReturnFalse" classname="warmup2.NoTriplesTest" time="0.0"/>
+  <testcase name="whenArrayLengthIsLessThan3ThenReturnTrue" classname="warmup2.NoTriplesTest" time="0.0"/>
+  <testcase name="whenArrayContainsNoTripleInARowThenReturnTrue" classname="warmup2.NoTriplesTest" time="0.0"/>
+  <testcase name="whenEmptyArrayIsPassedThenReturnTrue" classname="warmup2.NoTriplesTest" time="0.0"/>
+  <testcase name="whenArrayContainsTripleValuesThatAreTheSameThenReturnFalse" classname="warmup2.NoTriplesTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

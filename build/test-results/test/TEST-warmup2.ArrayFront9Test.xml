@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="warmup2.ArrayFront9Test" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-01-01T12:58:12" hostname="Artemass-MacBook-Pro.local" time="0.001">
+  <properties/>
+  <testcase name="whenArrayIsMoreThan4ElementsAndDoesNotContain9InTheWholeElementThenReturnFalse" classname="warmup2.ArrayFront9Test" time="0.0"/>
+  <testcase name="whenArrayIsMoreThan4ElementsAndDoesContain9InTheFirst4ElementsThenReturnTrue" classname="warmup2.ArrayFront9Test" time="0.0"/>
+  <testcase name="whenArrayIsLessThan4ElementsAndDoesNotContain9ThenReturnFalse" classname="warmup2.ArrayFront9Test" time="0.0"/>
+  <testcase name="whenArrayIsLessThan4ElementsAndContains9ThenReturnTrue" classname="warmup2.ArrayFront9Test" time="0.0"/>
+  <testcase name="whenArrayIsMoreThan4ElementsAndDoesNotContain9InTheFirst4ElementsThenReturnFalse" classname="warmup2.ArrayFront9Test" time="0.0"/>
+  <testcase name="whenArrayPassedInIsEmptyThenReturnFalse" classname="warmup2.ArrayFront9Test" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

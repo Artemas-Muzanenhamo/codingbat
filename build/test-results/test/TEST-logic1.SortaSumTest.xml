@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="logic1.SortaSumTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-01-01T12:58:12" hostname="Artemass-MacBook-Pro.local" time="0.0">
+  <properties/>
+  <testcase name="whenSumOfIntegersPassedInIsInTheRangeOf10To19ThenReturn20" classname="logic1.SortaSumTest" time="0.0"/>
+  <testcase name="whenSumOfIntegersPassedInIsNotInTheRangeOf10To19ThenReturnSumValue" classname="logic1.SortaSumTest" time="0.0"/>
+  <testcase name="whenSumOfIntegersPassedInIsAboveTheRangeOf10To19ThenReturnTheSumValue" classname="logic1.SortaSumTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

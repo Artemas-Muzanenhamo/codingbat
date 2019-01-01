@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="logic1.NearTenTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-01-01T12:58:13" hostname="Artemass-MacBook-Pro.local" time="0.001">
+  <properties/>
+  <testcase name="whenTheNumberPassedInIs2MoreOfAMultipleOf10ThenReturnTrue" classname="logic1.NearTenTest" time="0.0"/>
+  <testcase name="whenTheNumberPassedInIsAMultipleOf10ThenReturnTrue" classname="logic1.NearTenTest" time="0.001"/>
+  <testcase name="whenTheNumberPassedInIs1LessOfAMultipleOf10ThenReturnTrue" classname="logic1.NearTenTest" time="0.0"/>
+  <testcase name="whenTheNumberPassedInIs3MoreThanATheMultipleOf10ThenReturnFalse" classname="logic1.NearTenTest" time="0.0"/>
+  <testcase name="whenTheNumberPassedInIs2LessOfAMultipleOf10ThenReturnTrue" classname="logic1.NearTenTest" time="0.0"/>
+  <testcase name="whenTheNumberPassedInIs1MoreOfAMultipleOf10ThenReturnTrue" classname="logic1.NearTenTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

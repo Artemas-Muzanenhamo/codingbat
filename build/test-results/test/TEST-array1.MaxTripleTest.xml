@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="array1.MaxTripleTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-01-01T12:58:12" hostname="Artemass-MacBook-Pro.local" time="0.0">
+  <properties/>
+  <testcase name="whenAnArrayOfOddLengthIsPassedThenReturnTheLargestValueInTheArray" classname="array1.MaxTripleTest" time="0.0"/>
+  <testcase name="whenAnEmptyArrayIsPassedThenReturnZero" classname="array1.MaxTripleTest" time="0.0"/>
+  <testcase name="whenAnArrayOfLengthTwoIsPassedThenReturnZero" classname="array1.MaxTripleTest" time="0.0"/>
+  <testcase name="whenAnArrayOfLengthOneIsPassedTheNumber" classname="array1.MaxTripleTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

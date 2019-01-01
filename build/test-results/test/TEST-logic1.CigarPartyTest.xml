@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="logic1.CigarPartyTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-01-01T12:58:13" hostname="Artemass-MacBook-Pro.local" time="0.001">
+  <properties/>
+  <testcase name="whenNumberOfCigarsIsMoreThanOrEqualTo40ThenReturnTrue" classname="logic1.CigarPartyTest" time="0.0"/>
+  <testcase name="whenNumberOfCigarsIsLessThanOrEqualTo60ThenReturnTrue" classname="logic1.CigarPartyTest" time="0.0"/>
+  <testcase name="whenNumberOfCigarsIsMoreThan60ThenReturnFalse" classname="logic1.CigarPartyTest" time="0.0"/>
+  <testcase name="whenNumberOfCigarsIsMoreThan60AndItsAWeekendThenReturnTrue" classname="logic1.CigarPartyTest" time="0.0"/>
+  <testcase name="whenNumberOfCigarsIsLessThan30AndItsAWeekendThenReturnFalse" classname="logic1.CigarPartyTest" time="0.0"/>
+  <testcase name="whenNumberOfCigarsIsMoreThanOrEqualTo40AndItsAWeekendThenReturnTrue" classname="logic1.CigarPartyTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

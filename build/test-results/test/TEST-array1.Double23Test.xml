@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="array1.Double23Test" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-01-01T12:58:12" hostname="Artemass-MacBook-Pro.local" time="0.0">
+  <properties/>
+  <testcase name="whenAnArrayIsPassedInContaining4TwiceThenReturnFalse" classname="array1.Double23Test" time="0.0"/>
+  <testcase name="whenAnEmptyArrayIsPassedThenReturnFalse" classname="array1.Double23Test" time="0.0"/>
+  <testcase name="whenAnArrayIsPassedInContaining3TwiceThenReturnTrue" classname="array1.Double23Test" time="0.0"/>
+  <testcase name="whenAnArrayIsPassedInContaining2TwiceThenReturnTrue" classname="array1.Double23Test" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

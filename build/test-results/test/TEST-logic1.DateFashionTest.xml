@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="logic1.DateFashionTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-01-01T12:58:12" hostname="Artemass-MacBook-Pro.local" time="0.001">
+  <properties/>
+  <testcase name="whenYourStyleIsLessThan3AndYourDateIsMoreThan8ThenReturn0" classname="logic1.DateFashionTest" time="0.001"/>
+  <testcase name="whenYouAndYourDateAre5ThenReturn1" classname="logic1.DateFashionTest" time="0.0"/>
+  <testcase name="whenYouAndYourDateAreLessThan3ThenReturn0" classname="logic1.DateFashionTest" time="0.0"/>
+  <testcase name="whenYouOrYourDateAre8OrMoreThenReturn2" classname="logic1.DateFashionTest" time="0.0"/>
+  <testcase name="whenYouAre5AndYourDateIs2ThenReturn0" classname="logic1.DateFashionTest" time="0.0"/>
+  <testcase name="whenYouAre5AndYourDateIs10ThenReturn2" classname="logic1.DateFashionTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

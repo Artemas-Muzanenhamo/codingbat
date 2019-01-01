@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="logic1.TeaPartyTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-01-01T12:58:13" hostname="Artemass-MacBook-Pro.local" time="0.0">
+  <properties/>
+  <testcase name="whenCandyIsDoubleTheAmountOfTeaThenReturn2" classname="logic1.TeaPartyTest" time="0.0"/>
+  <testcase name="whenEitherTeaOrCandyAreBelow5ThenReturn0" classname="logic1.TeaPartyTest" time="0.0"/>
+  <testcase name="whenCandyAndTeaAreGreaterThan5ThenReturn1" classname="logic1.TeaPartyTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

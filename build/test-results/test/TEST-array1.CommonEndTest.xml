@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="array1.CommonEndTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-01-01T12:58:12" hostname="Artemass-MacBook-Pro.local" time="0.001">
+  <properties/>
+  <testcase name="whenArraysHaveTheSameLastElementThenReturnTrue" classname="array1.CommonEndTest" time="0.0"/>
+  <testcase name="whenEmptyArraysArePassedThenReturnFalse" classname="array1.CommonEndTest" time="0.0"/>
+  <testcase name="whenArraysHaveTheSameFirstElementThenReturnTrue" classname="array1.CommonEndTest" time="0.0"/>
+  <testcase name="whenArraysHaveNoFirstOrLastElementsInCommonThenReturnFalse" classname="array1.CommonEndTest" time="0.0"/>
+  <testcase name="whenLeftArrayIsPassedButRightArrayIsEmptyThenReturnFalse" classname="array1.CommonEndTest" time="0.0"/>
+  <testcase name="whenRightArrayIsPassedButLeftArrayIsEmptyThenReturnFalse" classname="array1.CommonEndTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
