@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="array1.MakeEndsTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-01-01T12:58:12" hostname="Artemass-MacBook-Pro.local" time="0.001">
-  <properties/>
-  <testcase name="whenArrayPassedInIsLength1ThenReturnTheArrayValueAsIs" classname="array1.MakeEndsTest" time="0.0"/>
-  <testcase name="whenArrayPassedInHasLengthMoreThan1ThenReturnArrayMadeOfThe1stElementAndLastElement" classname="array1.MakeEndsTest" time="0.0"/>
-  <testcase name="whenAnEmptyArrayIsPassedThenReturnAnEmptyArrayValue" classname="array1.MakeEndsTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

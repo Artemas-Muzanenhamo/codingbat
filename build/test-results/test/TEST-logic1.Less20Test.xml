@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="logic1.Less20Test" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-01-01T12:58:13" hostname="Artemass-MacBook-Pro.local" time="0.0">
-  <properties/>
-  <testcase name="whenNumberPassedInIs2LessThanTheMultipleOf20ThenReturnTrue" classname="logic1.Less20Test" time="0.0"/>
-  <testcase name="whenNumberPassedInIs1LessThanMultipleOf20ThenReturnTrue" classname="logic1.Less20Test" time="0.0"/>
-  <testcase name="whenNumberPassedInIsAMultipleOf20ThenReturnFalse" classname="logic1.Less20Test" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="array1.SameFirstLastTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-01-01T12:58:12" hostname="Artemass-MacBook-Pro.local" time="0.001">
-  <properties/>
-  <testcase name="whenArrayPassedHasTheSameNumberAtTheFirstIndexAndLastIndexThenReturnTrue" classname="array1.SameFirstLastTest" time="0.001"/>
-  <testcase name="whenArrayPassedHasADifferentNumberOnTheFirstIndexAndLastIndexThenReturnFalse" classname="array1.SameFirstLastTest" time="0.0"/>
-  <testcase name="whenAnEmptyArrayIsPassedThenReturnFalse" classname="array1.SameFirstLastTest" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

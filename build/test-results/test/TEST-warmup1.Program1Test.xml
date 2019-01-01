@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="warmup1.Program1Test" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-01-01T12:58:13" hostname="Artemass-MacBook-Pro.local" time="0.0">
-  <properties/>
-  <testcase name="whenNumberDoesNotContainTeenThenReturnFalse" classname="warmup1.Program1Test" time="0.0"/>
-  <testcase name="whenNumberContainTeenThenReturnTrue" classname="warmup1.Program1Test" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
