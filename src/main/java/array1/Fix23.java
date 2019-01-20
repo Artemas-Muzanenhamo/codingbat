@@ -3,8 +3,8 @@ package array1;
 /**
  * Created by amuzanenhamo on 26/05/2017.
  */
-public class Fix23 {
-    public static int[] fix23(int[] nums) {
+class Fix23 {
+    int[] fix23(int[] nums) {
 
         if (nums.length > 2){
 

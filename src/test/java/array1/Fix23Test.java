@@ -1,5 +1,6 @@
 package array1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
@@ -17,16 +18,23 @@ import static org.junit.Assert.assertArrayEquals;
  */
 public class Fix23Test {
 
+    private Fix23 fix23;
     private int[] actualArray = {};
-    private int[] expectedArray = {};
+    
+    @Before
+    public void setup() {
+        fix23 = new Fix23();
+    }
 
     @Test
     public void whenAnEmptyArrayIsPassedThenReturnAnEmptyArrayBack(){
-        assertArrayEquals(expectedArray, Fix23.fix23(actualArray));
+        int[] expectedArray = {};
+        assertArrayEquals(expectedArray, fix23.fix23(actualArray));
     }
 
     @Test
     public void whenAnArrayOfLength2IsPassedThenReturnTheArrayAsIs(){
+        int[] expectedArray = {};
 
         actualArray = new int[2];
         actualArray[0] = 1;
@@ -36,11 +44,12 @@ public class Fix23Test {
         expectedArray[0] = 1;
         expectedArray[1] = 2;
 
-        assertArrayEquals(expectedArray, Fix23.fix23(actualArray));
+        assertArrayEquals(expectedArray, fix23.fix23(actualArray));
     }
 
     @Test
     public void whenAnArrayOfLength3IsPassedAndContainsA2FollowedByA3AtIndex1ThenReplaceThe3WithZeroInTheArray(){
+        int[] expectedArray = {};
 
         actualArray = new int[3];
         actualArray[0] = 1;
@@ -52,10 +61,12 @@ public class Fix23Test {
         expectedArray[1] = 2;
         expectedArray[2] = 0;
 
-        assertArrayEquals(expectedArray, Fix23.fix23(actualArray));
+        assertArrayEquals(expectedArray, fix23.fix23(actualArray));
     }
 
-    public void whenAnArrayOfLength3IsPassedAndContainsA2FollowedByA3AtIndex0ThenReplaceThe3WithZeroInTheArray(){
+    @Test
+    public void whenAnArrayOfLength3IsPassedAndContainsA2FollowedByA3AtIndex0ThenReplaceThe2WithZeroInTheArray(){
+        int[] expectedArray = {};
 
         actualArray = new int[3];
         actualArray[0] = 2;
@@ -67,7 +78,7 @@ public class Fix23Test {
         expectedArray[1] = 0;
         expectedArray[2] = 5;
 
-        assertArrayEquals(expectedArray, Fix23.fix23(actualArray));
+        assertArrayEquals(expectedArray, fix23.fix23(actualArray));
     }
 
 }
