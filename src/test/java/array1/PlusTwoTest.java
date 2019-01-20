@@ -1,5 +1,6 @@
 package array1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
@@ -15,13 +16,19 @@ import static org.junit.Assert.assertArrayEquals;
  */
 public class PlusTwoTest {
 
+    private PlusTwo plusTwo;
     private int[] firstActualArray = {};
     private int[] secondActualArray = {};
     private int[] expectedArray = {};
+    
+    @Before
+    public void setup() {
+        plusTwo = new PlusTwo();
+    }
 
     @Test
     public void whenAnEmptyArrayIsPassedThenReturnAnEmptyArray(){
-        assertArrayEquals(expectedArray, PlusTwo.plusTwo(firstActualArray, secondActualArray));
+        assertArrayEquals(expectedArray, plusTwo.plusTwo(firstActualArray, secondActualArray));
     }
 
     @Test
@@ -38,7 +45,20 @@ public class PlusTwoTest {
 //        expectedArray = new int[4];
         expectedArray = new int[]{1, 2, 3, 4};
 
-        assertArrayEquals(expectedArray, PlusTwo.plusTwo(firstActualArray, secondActualArray));
+        assertArrayEquals(expectedArray, plusTwo.plusTwo(firstActualArray, secondActualArray));
+    }
+
+    @Test
+    public void when_both_arrays_are_length_1_then_return_an_empty_array() {
+        firstActualArray = new int[1];
+        secondActualArray = new int[1];
+
+        firstActualArray[0] = 1;
+        secondActualArray[0] = 2;
+
+        expectedArray = new int[]{};
+
+        assertArrayEquals(expectedArray, plusTwo.plusTwo(firstActualArray, secondActualArray));
     }
 
 }

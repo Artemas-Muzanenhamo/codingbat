@@ -3,8 +3,8 @@ package array1;
 /**
  * Created by artemasm on 06/06/2017.
  */
-public class PlusTwo {
-    public static int[] plusTwo(int[] a, int[] b) {
+class PlusTwo {
+    int[] plusTwo(int[] a, int[] b) {
 
         int[] array = {};
 
