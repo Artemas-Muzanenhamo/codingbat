@@ -18,6 +18,7 @@ public class No23Test {
     private int[] arrayCase2 = {2, 5};
     private int[] arrayCase3 = {4, 3};
     private int[] arrayCase4 = {4, 5};
+    private int[] arrayCase5 = {2, 3};
     
     @Before
     public void setUp() {
@@ -40,6 +41,7 @@ public class No23Test {
 
         //lazy
         assertFalse(no23.no23(arrayCase3));
+        assertFalse(no23.no23(arrayCase5));
     }
 
     @Test
