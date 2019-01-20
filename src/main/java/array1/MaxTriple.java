@@ -3,8 +3,8 @@ package array1;
 /**
  * Created by Artemas on 08/06/2017.
  */
-public class MaxTriple {
-    public int maxTriple(int[] nums) {
+class MaxTriple {
+    int maxTriple(int[] nums) {
 
         int highestValue = 0;
 

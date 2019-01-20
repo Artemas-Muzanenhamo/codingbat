@@ -36,27 +36,31 @@ public class MaxTripleTest {
 
     @Test
     public void whenAnArrayOfLengthOneIsPassedTheNumber(){
-
         array = new int[]{1};
-
         assertEquals(1, maxTriple.maxTriple(array));
     }
 
     @Test
     public void whenAnArrayOfLengthTwoIsPassedThenReturnZero(){
-
         array = new int[]{1, 2};
-
         assertEquals(0, maxTriple.maxTriple(array));
-
     }
 
     @Test
     public void whenAnArrayOfOddLengthIsPassedThenReturnTheLargestValueInTheArray(){
-
         array = new int[]{1, 2, 3};
-
         assertEquals(3, maxTriple.maxTriple(array));
+    }
 
+    @Test
+    public void when_first_number_in_array_is_bigger_then_return_value_from_array() {
+        array = new int[] {5, 3, 2};
+        assertEquals(5, maxTriple.maxTriple(array));
+    }
+
+    @Test
+    public void when_middle_number_in_array_is_bigger_then_return_value_from_array() {
+        array = new int[] {1, 5, 2};
+        assertEquals(5, maxTriple.maxTriple(array));
     }
 }

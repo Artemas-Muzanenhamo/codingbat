@@ -15,3 +15,4 @@ target/
 *~
 /build/
 /.gradle/
+/out/
