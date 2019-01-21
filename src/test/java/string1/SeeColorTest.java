@@ -1,52 +1,60 @@
 package string1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 /**
  * Created by amuzanenhamo on 27/04/2017.
- *
+ * <p>
  * Given a string, if the string begins with "red" or "blue" return that color string, otherwise return the empty string.
- *
+ * <p>
  * seeColor("redxx") → "red"
  * seeColor("xxred") → ""
  * seeColor("blueTimes") → "blue"
  */
 public class SeeColorTest {
 
-    @Test
-    public void whenEmptyStringIsPassedThenReturnEmptyString(){
-        assertEquals("", SeeColor.seeColor(""));
+    private SeeColor seeColor;
+
+    @Before
+    public void setup() {
+        seeColor = new SeeColor();
     }
 
     @Test
-    public void whenStringPassedInHasLengthLessThan3ThenReturnEmptyString(){
-        assertEquals("", SeeColor.seeColor("Hi"));
+    public void whenEmptyStringIsPassedThenReturnEmptyString() {
+        assertEquals("", seeColor.seeColor(""));
     }
 
     @Test
-    public void whenStringIsPassedInContainsRedAtTheBeginningThenReturnRedAsStringValue(){
-        assertEquals("red", SeeColor.seeColor("redxx"));
+    public void whenStringPassedInHasLengthLessThan3ThenReturnEmptyString() {
+        assertEquals("", seeColor.seeColor("Hi"));
     }
 
     @Test
-    public void whenStringIsPassedInContainsBlueAtBeginningThenReturnBlueAsStringValue(){
-        assertEquals("blue", SeeColor.seeColor("blueTimes"));
+    public void whenStringIsPassedInContainsRedAtTheBeginningThenReturnRedAsStringValue() {
+        assertEquals("red", seeColor.seeColor("redxx"));
     }
 
     @Test
-    public void whenStringPassedInDoesNotContainRedOrBlueValueThenReturnEmptyString(){
-        assertEquals("", SeeColor.seeColor("Artemas"));
+    public void whenStringIsPassedInContainsBlueAtBeginningThenReturnBlueAsStringValue() {
+        assertEquals("blue", seeColor.seeColor("blueTimes"));
     }
 
     @Test
-    public void whenStringPassedInContainsRedAtTheEndThenReturnEmptyString(){
-        assertEquals("", SeeColor.seeColor("xxred"));
+    public void whenStringPassedInDoesNotContainRedOrBlueValueThenReturnEmptyString() {
+        assertEquals("", seeColor.seeColor("Artemas"));
     }
 
     @Test
-    public void whenStringPassedInContainsBlueAtTheEndThenReturnEmptyString(){
-        assertEquals("", SeeColor.seeColor("xblue"));
+    public void whenStringPassedInContainsRedAtTheEndThenReturnEmptyString() {
+        assertEquals("", seeColor.seeColor("xxred"));
+    }
+
+    @Test
+    public void whenStringPassedInContainsBlueAtTheEndThenReturnEmptyString() {
+        assertEquals("", seeColor.seeColor("xblue"));
     }
 }
