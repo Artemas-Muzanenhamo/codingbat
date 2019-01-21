@@ -44,4 +44,14 @@ public class StartWordTest {
         assertEquals("hip", startWord.startWord("hippo", "xip"));
     }
 
+    @Test
+    public void when_word_length_is_greater_than_string_length_then_return_empty_string() {
+        assertEquals("", startWord.startWord("hip", "hippo"));
+    }
+
+    @Test
+    public void when_strings_do_not_match_then_return_empty_string() {
+        assertEquals("", startWord.startWord("artemas", "hippo"));
+    }
+
 }

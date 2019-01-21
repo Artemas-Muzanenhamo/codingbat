@@ -3,8 +3,8 @@ package string1;
 /**
  * Created by Artemas on 12/09/2017.
  */
-public class StartWord {
-    public String startWord(String string, String word) {
+class StartWord {
+    String startWord(String string, String word) {
 
         if (word.length() > string.length()) {
             return "";
@@ -18,8 +18,6 @@ public class StartWord {
             return string.charAt(0) + word.substring(1);
         }
 
-
         return "";
-
     }
 }
