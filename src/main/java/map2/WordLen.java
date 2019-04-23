@@ -6,8 +6,8 @@ import java.util.Map;
 /**
  * Created by amuzanenhamo on 30/05/2017.
  */
-public class WordLen {
-    public Map<String,Integer> wordLen(String[] strings) {
+class WordLen {
+    Map<String,Integer> wordLen(String[] strings) {
 
         Map<String, Integer> map = new HashMap<>();
 
