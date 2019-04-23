@@ -26,6 +26,27 @@ public class WordMultipleTest {
     }
 
     @Test
+    public void should_return_false_when_array_of_strings_has_length_1() {
+        String[] strings = {"a"};
+        Map<String, Boolean> expectedResult = new HashMap<>();
+        expectedResult.put("a", false);
+
+        Map<String, Boolean> containsDuplicates = wordMultiple.wordMultiple(strings);
+
+        assertEquals(expectedResult, containsDuplicates);
+    }
+
+    @Test
+    public void should_not_do_anything_when_array_of_strings_has_length_0() {
+        String[] strings = {};
+        Map<String, Boolean> expectedResult = new HashMap<>();
+
+        Map<String, Boolean> containsDuplicates = wordMultiple.wordMultiple(strings);
+
+        assertEquals(expectedResult, containsDuplicates);
+    }
+
+    @Test
     public void should_return_true_when_there_is_a_duplicate_key() {
         String[] strings = {"a", "b", "a", "c", "b"};
         Map<String, Boolean> expectedResult = new HashMap<>();
