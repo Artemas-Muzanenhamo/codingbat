@@ -9,14 +9,11 @@ plugins {
 }
 
 repositories {
-    mavenLocal()
-    maven {
-        url = 'http://repo.maven.apache.org/maven2'
-    }
+    mavenCentral()
 }
 
 dependencies {
-    testCompile 'junit:junit:4.11'
+    testCompile 'junit:junit:4.13'
     testCompile group: 'org.codehaus.mojo', name: 'cobertura-maven-plugin', version: '2.7'
 
 }
